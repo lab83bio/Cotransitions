@@ -133,6 +133,7 @@ if (args$tree=='raxml'){
   if ( !file.exists(RAxMLfile) ){
     RAxML_opt <- "-m BINCAT -p 33 -T 8";
     RAXml <- paste("raxmlHPC-PTHREADS","-g",phylip_tree,"-s",phylip_data,"-n",base_name, RAxML_opt," > /dev/null")
+    system (RAXml)
   }
   
   tr <- read.tree(RAxMLfile)
