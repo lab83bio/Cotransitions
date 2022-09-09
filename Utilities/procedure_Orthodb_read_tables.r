@@ -135,7 +135,7 @@ if (args$tree=='raxml'){
     RAXml <- paste("raxmlHPC-PTHREADS","-g",phylip_tree,"-s",phylip_data,"-n",base_name, RAxML_opt," > /dev/null")
   }
   
-  tr <- read.tree("../RAxML_bestTree.Eukaryota")
+  #tr <- read.tree("../RAxML_bestTree.Eukaryota")
 
   #assign internal nodes
   LCA <- function(taxids, cl){ #Lowest common ancestor of a taxid vector
