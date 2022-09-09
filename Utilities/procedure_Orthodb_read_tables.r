@@ -129,13 +129,13 @@ system(paste("sed -i s/#//g",phylip_data)) #could not use empty sep
 
 if (args$tree=='raxml'){
   
-  RAxMLfile <- paste("RAxML_bestTree.",base_name)
+  RAxMLfile <- paste0("RAxML_bestTree.",base_name)
   if ( !file.exists(RAxMLfile) ){
     RAxML_opt <- "-m BINCAT -p 33 -T 8";
     RAXml <- paste("raxmlHPC-PTHREADS","-g",phylip_tree,"-s",phylip_data,"-n",base_name, RAxML_opt," > /dev/null")
   }
   
-  #tr <- read.tree("../RAxML_bestTree.Eukaryota")
+  tr <- read.tree(RAxMLfile)
 
   #assign internal nodes
   LCA <- function(taxids, cl){ #Lowest common ancestor of a taxid vector
