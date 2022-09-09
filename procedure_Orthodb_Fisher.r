@@ -58,7 +58,7 @@ D <- D[order(D$p),]
 write.table(format(D,digits=5), file = "" , quote=F, sep="\t", row.names=F)
 
 #all done:
-write(paste0(nrow(D)-1," gene pairs with p <= ",p.cutoff, " and p.adj <= ",padj.cutoff), stderr())
+write(paste0(nrow(D) ," gene pairs with p <= ",p.cutoff, " and p.adj <= ",padj.cutoff), stderr())
 
 
 
