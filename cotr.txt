@@ -228,6 +228,7 @@ https://conda.anaconda.org/conda-forge/noarch/r-praise-1.0.0-r41hc72bb7e_1005.ta
 https://conda.anaconda.org/conda-forge/linux-64/r-proxy-0.4_27-r41h06615bd_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-ps-1.7.1-r41h06615bd_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-quadprog-1.5_8-r41h742201e_3.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/r-r.methodss3-1.8.2-r41hc72bb7e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/r-r6-2.5.1-r41hc72bb7e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-rappdirs-0.3.3-r41hcfec24a_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/r-rcolorbrewer-1.1_3-r41h785f33e_0.tar.bz2
@@ -277,6 +278,7 @@ https://conda.anaconda.org/conda-forge/linux-64/r-plyr-1.8.7-r41h7525677_0.tar.b
 https://conda.anaconda.org/conda-forge/noarch/r-prettyunits-1.1.1-r41hc72bb7e_1.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-processx-3.7.0-r41h06615bd_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-purrr-0.3.4-r41hcfec24a_1.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/r-r.oo-1.25.0-r41hc72bb7e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/r-ratelimitr-0.4.1-r41hc72bb7e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/r-rex-1.2.1-r41hc72bb7e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/noarch/r-rprojroot-2.0.3-r41hc72bb7e_0.tar.bz2
@@ -304,6 +306,7 @@ https://conda.anaconda.org/conda-forge/noarch/r-memoise-2.0.1-r41hc72bb7e_0.tar.
 https://conda.anaconda.org/conda-forge/linux-64/r-mgcv-1.8_40-r41h0154571_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-openssl-2.0.2-r41h1f3e0c5_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-promises-1.2.0.1-r41h03ef668_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/r-r.utils-2.12.0-r41hc72bb7e_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-raster-3.5_21-r41h7525677_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-rcppeigen-0.3.3.9.2-r41h43535f1_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/r-reshape-0.8.9-r41hc72bb7e_0.tar.bz2
