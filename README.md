@@ -1,1 +1,3 @@
 # Cotransitions
+
+source install.sh
