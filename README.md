@@ -3,7 +3,7 @@ Pipeline in python3 and R to perform coevolutionary analysis
 
 
 
-##Installation
+## Installation
 
 ### Requirements
 Any version of Conda or miniconda
@@ -17,3 +17,6 @@ The installation is successful if `(cotr)` in the command line prompt
 
 ## Usage
 
+## Notebook usage
+ipynb files can be opened with `jupyter-lab` included in `cotr` conda environment
+The whole analysis can be performed by clicking ⏩ "Restart kernel and run all cells..."
