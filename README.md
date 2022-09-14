@@ -1,5 +1,5 @@
 # Cotransitions
-Identification of hidden associations among eukaryotic genes through statistical analysis of co-evolutionary transitions.
+Identification of hidden associations among eukaryotic genes through statistical analysis of co-evolutionary transitions. <br>
 [![DOI](https://zenodo.org/badge/DOI/xxxx/zenodo.xxxx.svg)](https://doi.org/xxxx/zenodo.xxx) 
 <br><br>
 
