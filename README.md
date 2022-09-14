@@ -18,6 +18,7 @@ The installation is successful if `(cotr)` in the command line prompt
 ```console
 (cotr) user@pc:~/Cotransitions$ 
 ```
+
 ## Usage
 
 ## Notebook usage
