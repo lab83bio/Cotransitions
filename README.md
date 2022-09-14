@@ -2,7 +2,6 @@
 Pipeline in python3 and R to perform coevolutionary analysis
 
 
-
 ## Installation
 
 ### Requirements
