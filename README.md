@@ -1,6 +1,9 @@
 # Cotransitions
 Pipeline in python3 and R to perform coevolutionary analysis
 
+[![DOI](https://zenodo.org/badge/DOI/xxxx/zenodo.xxxx.svg)](https://doi.org/xxxx/zenodo.xxx)
+
+
 
 ## Installation
 
