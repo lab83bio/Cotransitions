@@ -8,7 +8,7 @@ Pipeline in python3 and R to perform coevolutionary analysis
 ## Installation
 
 ### Requirements
-Any version of Conda or miniconda
+Any version of [Conda](https://docs.conda.io/en/latest/) or [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 
 ```{bash}
 git clone https://github.com/lab83bio/Cotransitions.git
@@ -24,5 +24,6 @@ The installation is successful if `(cotr)` in the command line prompt
 ## Usage
 
 ## Notebook usage
-*.ipynb* files can be opened with `jupyter-lab` included in `cotr` conda environment <br>
+[*Concordant.ipynb*](https://github.com/lab83bio/Cotransitions/blob/master/Notebook/Concordant.ipynb) and
+[*Validation.ipynb*](https://github.com/lab83bio/Cotransitions/blob/master/Notebook/Validation.ipynb) files can be opened with `jupyter-lab` included in `cotr` conda environment <br>
 The whole analysis can be performed by clicking ⏩ "Restart kernel and run all cells..."
