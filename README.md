@@ -18,5 +18,5 @@ The installation is successful if `(cotr)` in the command line prompt
 ## Usage
 
 ## Notebook usage
-ipynb files can be opened with `jupyter-lab` included in `cotr` conda environment <br>
+.ipynb files can be opened with `jupyter-lab` included in `cotr` conda environment <br>
 The whole analysis can be performed by clicking ⏩ "Restart kernel and run all cells..."
