@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript 
 #
-# Fisher probability from a gene transition table 
+# Fisher probability from a gene co-transition table 
 #
 library(data.table)# Fast fread
 library(corpora)   # Fast fisher.pval
