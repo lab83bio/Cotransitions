@@ -1,0 +1,43 @@
+ssh: connect to host ui01 port 22: No route to host
+[I 2022-09-14 11:17:09.395 ServerApp] jupyterlab | extension was successfully linked.
+[I 2022-09-14 11:17:09.404 ServerApp] nbclassic | extension was successfully linked.
+[I 2022-09-14 11:17:18.880 ServerApp] notebook_shim | extension was successfully linked.
+[I 2022-09-14 11:17:19.452 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2022-09-14 11:17:19.453 LabApp] JupyterLab extension loaded from /hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/jupyterlab
+[I 2022-09-14 11:17:19.453 LabApp] JupyterLab application directory is /hpc/group/G_BIOSCIENZE/.conda/envs/cotr/share/jupyter/lab
+[I 2022-09-14 11:17:19.496 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2022-09-14 11:17:19.681 ServerApp] nbclassic | extension was successfully loaded.
+[I 2022-09-14 11:17:19.682 ServerApp] Serving notebooks from local directory: /hpc/home/carlo.derito
+[I 2022-09-14 11:17:19.682 ServerApp] Jupyter Server 1.18.1 is running at:
+[I 2022-09-14 11:17:19.682 ServerApp] http://localhost:9001/lab?token=d857e95ca673d7babad473c733ef0508295d5c4f68ea4652
+[I 2022-09-14 11:17:19.683 ServerApp]  or http://127.0.0.1:9001/lab?token=d857e95ca673d7babad473c733ef0508295d5c4f68ea4652
+[I 2022-09-14 11:17:19.683 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2022-09-14 11:17:19.739 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///hpc/home/carlo.derito/.local/share/jupyter/runtime/jpserver-91806-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:9001/lab?token=d857e95ca673d7babad473c733ef0508295d5c4f68ea4652
+     or http://127.0.0.1:9001/lab?token=d857e95ca673d7babad473c733ef0508295d5c4f68ea4652
+[W 2022-09-15 09:31:37.521 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2022-09-15 09:31:49.126 ServerApp] Kernel started: ca7c4404-c487-4634-b789-46fe1e8defd3
+[I 2022-09-15 09:31:49.128 ServerApp] Kernel started: c0f5d044-1490-4074-9397-4e1900bdaa5a
+[I 2022-09-15 09:31:49.130 ServerApp] Kernel started: dee41da9-3fc1-4153-96d3-aa30995d6a33
+[I 2022-09-15 09:31:49.134 ServerApp] Kernel started: 9606179e-d060-4676-8025-8711fffe4579
+[I 2022-09-15 09:32:04.636 ServerApp] Starting buffering for 9606179e-d060-4676-8025-8711fffe4579:0a1e2a3b-c19b-48a7-abeb-551f7f4b8100
+[I 2022-09-15 09:32:56.157 ServerApp] Saving file at /G_BIOSCIENZE/concordant/definitivo_set2/Concordant.ipynb
+[I 2022-09-15 09:35:00.443 ServerApp] Saving file at /G_BIOSCIENZE/concordant/definitivo_set2/Concordant.ipynb
+[I 2022-09-15 09:41:37.829 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 09:43:38.074 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 09:59:38.299 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:14:40.023 ServerApp] Starting buffering for c0f5d044-1490-4074-9397-4e1900bdaa5a:f2114076-e0ad-4858-9024-2e08d7b0fd4e
+[I 2022-09-15 10:14:40.025 ServerApp] Starting buffering for dee41da9-3fc1-4153-96d3-aa30995d6a33:fca349a7-59bd-4dcc-9030-1c909c5bd8b1
+[I 2022-09-15 10:14:40.027 ServerApp] Starting buffering for ca7c4404-c487-4634-b789-46fe1e8defd3:fc1a9740-2521-4d11-a642-3a8cd3101bcc
+[I 2022-09-15 10:14:40.028 ServerApp] Starting buffering for 9606179e-d060-4676-8025-8711fffe4579:4f8df555-cb5b-4fa7-b730-e2f5d2002b41
+[W 2022-09-15 10:14:47.095 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2022-09-15 10:18:58.312 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:20:58.587 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:21:49.262 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:22:49.290 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Concordant.ipynb
+[I 2022-09-15 10:23:21.577 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Concordant.ipynb
+[I 2022-09-15 10:23:48.682 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Concordant.ipynb
