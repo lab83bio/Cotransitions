@@ -41,3 +41,417 @@ ssh: connect to host ui01 port 22: No route to host
 [I 2022-09-15 10:22:49.290 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Concordant.ipynb
 [I 2022-09-15 10:23:21.577 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Concordant.ipynb
 [I 2022-09-15 10:23:48.682 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Concordant.ipynb
+[I 2022-09-15 10:31:09.940 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:31:19.639 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:33:17.793 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:33:40.475 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:34:10.459 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:37:03.755 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:37:13.305 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:37:22.880 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:37:42.625 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:38:59.038 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:39:02.636 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:39:25.195 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:40:57.528 ServerApp] AsyncIOLoopKernelRestarter: restarting kernel (1/5), keep random ports
+[W 2022-09-15 10:40:57.528 ServerApp] kernel c0f5d044-1490-4074-9397-4e1900bdaa5a restarted
+[I 2022-09-15 10:40:57.601 ServerApp] Starting buffering for c0f5d044-1490-4074-9397-4e1900bdaa5a:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 10:40:57.669 ServerApp] Restoring connection for c0f5d044-1490-4074-9397-4e1900bdaa5a:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 10:45:25.378 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:51:25.634 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:56:23.968 ServerApp] Kernel interrupted: c0f5d044-1490-4074-9397-4e1900bdaa5a
+[I 2022-09-15 10:57:25.900 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 10:58:59.898 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 11:00:37.878 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 11:00:48.020 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[W 2022-09-15 11:03:42.799 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573
+[W 2022-09-15 11:03:42.800 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573, on different device to home directory
+[W 2022-09-15 11:03:42.804 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573
+[W 2022-09-15 11:03:42.804 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573, on different device to home directory
+[I 2022-09-15 11:03:47.409 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 11:07:06.600 ServerApp] AsyncIOLoopKernelRestarter: restarting kernel (1/5), keep random ports
+[W 2022-09-15 11:07:06.600 ServerApp] kernel c0f5d044-1490-4074-9397-4e1900bdaa5a restarted
+[I 2022-09-15 11:07:06.652 ServerApp] Starting buffering for c0f5d044-1490-4074-9397-4e1900bdaa5a:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 11:07:06.731 ServerApp] Restoring connection for c0f5d044-1490-4074-9397-4e1900bdaa5a:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 16:35:42.210 ServerApp] Kernel restarted: c0f5d044-1490-4074-9397-4e1900bdaa5a
+[I 2022-09-15 16:35:42.253 ServerApp] Starting buffering for c0f5d044-1490-4074-9397-4e1900bdaa5a:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 16:35:42.282 ServerApp] Restoring connection for c0f5d044-1490-4074-9397-4e1900bdaa5a:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 16:35:44.679 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 16:35:46.286 ServerApp] Kernel started: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+[I 2022-09-15 16:35:46.287 ServerApp] Kernel shutdown: c0f5d044-1490-4074-9397-4e1900bdaa5a
+[I 2022-09-15 16:36:33.270 ServerApp] Kernel restarted: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+[I 2022-09-15 16:36:33.342 ServerApp] Starting buffering for 7316ffc9-c373-454c-a27f-fc0494cba4b0:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 16:36:33.372 ServerApp] Restoring connection for 7316ffc9-c373-454c-a27f-fc0494cba4b0:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[W 2022-09-15 16:39:04.060 ServerApp] Replacing stale connection: dee41da9-3fc1-4153-96d3-aa30995d6a33:5ad0664f-129d-4159-9a5c-3209aa5c94ff
+[W 2022-09-15 16:39:04.643 ServerApp] Replacing stale connection: ca7c4404-c487-4634-b789-46fe1e8defd3:e7f2692f-86b7-4200-bdc1-6e6492f30b38
+[I 2022-09-15 16:39:06.207 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 16:39:09.065 ServerApp] Starting buffering for dee41da9-3fc1-4153-96d3-aa30995d6a33:5ad0664f-129d-4159-9a5c-3209aa5c94ff
+[I 2022-09-15 16:39:09.067 ServerApp] Restoring connection for dee41da9-3fc1-4153-96d3-aa30995d6a33:5ad0664f-129d-4159-9a5c-3209aa5c94ff
+[I 2022-09-15 16:39:09.644 ServerApp] Starting buffering for ca7c4404-c487-4634-b789-46fe1e8defd3:e7f2692f-86b7-4200-bdc1-6e6492f30b38
+[I 2022-09-15 16:39:09.646 ServerApp] Restoring connection for ca7c4404-c487-4634-b789-46fe1e8defd3:e7f2692f-86b7-4200-bdc1-6e6492f30b38
+[W 2022-09-15 16:39:19.060 ServerApp] Replacing stale connection: 9606179e-d060-4676-8025-8711fffe4579:e215e0f9-8b30-4cfe-850d-5f5d031d6792
+[W 2022-09-15 16:39:21.360 ServerApp] Replacing stale connection: 7316ffc9-c373-454c-a27f-fc0494cba4b0:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 16:39:24.065 ServerApp] Starting buffering for 9606179e-d060-4676-8025-8711fffe4579:e215e0f9-8b30-4cfe-850d-5f5d031d6792
+[I 2022-09-15 16:39:24.067 ServerApp] Restoring connection for 9606179e-d060-4676-8025-8711fffe4579:e215e0f9-8b30-4cfe-850d-5f5d031d6792
+[I 2022-09-15 16:39:26.362 ServerApp] Starting buffering for 7316ffc9-c373-454c-a27f-fc0494cba4b0:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 16:39:26.364 ServerApp] Restoring connection for 7316ffc9-c373-454c-a27f-fc0494cba4b0:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[I 2022-09-15 16:45:07.373 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 16:47:08.424 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 17:12:06.507 ServerApp] Starting buffering for dee41da9-3fc1-4153-96d3-aa30995d6a33:5ad0664f-129d-4159-9a5c-3209aa5c94ff
+[I 2022-09-15 17:12:06.508 ServerApp] Starting buffering for ca7c4404-c487-4634-b789-46fe1e8defd3:e7f2692f-86b7-4200-bdc1-6e6492f30b38
+[I 2022-09-15 17:12:06.509 ServerApp] Starting buffering for 9606179e-d060-4676-8025-8711fffe4579:e215e0f9-8b30-4cfe-850d-5f5d031d6792
+[I 2022-09-15 17:12:06.510 ServerApp] Starting buffering for 7316ffc9-c373-454c-a27f-fc0494cba4b0:6730eff6-3d95-4da2-ac9d-809a1aa7a363
+[W 2022-09-15 17:12:15.190 LabApp] Could not determine jupyterlab build status without nodejs
+[I 2022-09-15 17:16:17.278 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 17:28:54.664 ServerApp] Kernel restarted: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+[I 2022-09-15 17:28:54.752 ServerApp] Starting buffering for 7316ffc9-c373-454c-a27f-fc0494cba4b0:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-15 17:28:54.846 ServerApp] Restoring connection for 7316ffc9-c373-454c-a27f-fc0494cba4b0:c9598c9b-456c-4628-a96c-961c3840412b
+[W 2022-09-15 17:28:57.677 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast.C
+[W 2022-09-15 17:28:57.677 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-15 17:28:57.697 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast.C
+[W 2022-09-15 17:28:57.697 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast.C, on different device to home directory
+[W 2022-09-15 17:28:57.700 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast.C
+[W 2022-09-15 17:28:57.701 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-15 17:28:57.705 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast
+[W 2022-09-15 17:28:57.705 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast, on different device to home directory
+[W 2022-09-15 17:28:57.719 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast
+[W 2022-09-15 17:28:57.719 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast, on different device to home directory
+[W 2022-09-15 17:28:57.722 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast
+[W 2022-09-15 17:28:57.723 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast, on different device to home directory
+[W 2022-09-15 17:28:57.726 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast.C
+[W 2022-09-15 17:28:57.726 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-15 17:28:57.728 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast.C
+[W 2022-09-15 17:28:57.729 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast.C, on different device to home directory
+[W 2022-09-15 17:28:57.733 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast.C
+[W 2022-09-15 17:28:57.733 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-15 17:28:57.746 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast
+[W 2022-09-15 17:28:57.746 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast, on different device to home directory
+[W 2022-09-15 17:28:57.753 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast
+[W 2022-09-15 17:28:57.753 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast, on different device to home directory
+[W 2022-09-15 17:28:57.757 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast
+[W 2022-09-15 17:28:57.758 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast, on different device to home directory
+[W 2022-09-15 17:28:57.760 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast
+[W 2022-09-15 17:28:57.761 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast, on different device to home directory
+[W 2022-09-15 17:28:57.763 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573.mapped
+[W 2022-09-15 17:28:57.764 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573.mapped, on different device to home directory
+[W 2022-09-15 17:28:57.772 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573
+[W 2022-09-15 17:28:57.773 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573, on different device to home directory
+[W 2022-09-15 17:28:57.779 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pjs
+[W 2022-09-15 17:28:57.779 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pjs, on different device to home directory
+[W 2022-09-15 17:28:57.786 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.ptf
+[W 2022-09-15 17:28:57.787 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.ptf, on different device to home directory
+[W 2022-09-15 17:28:57.790 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pto
+[W 2022-09-15 17:28:57.790 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pto, on different device to home directory
+[W 2022-09-15 17:28:57.793 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pot
+[W 2022-09-15 17:28:57.793 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pot, on different device to home directory
+[W 2022-09-15 17:28:57.800 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pdb
+[W 2022-09-15 17:28:57.801 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pdb, on different device to home directory
+[W 2022-09-15 17:28:57.808 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pin
+[W 2022-09-15 17:28:57.808 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pin, on different device to home directory
+[W 2022-09-15 17:28:57.813 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.phr
+[W 2022-09-15 17:28:57.814 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.phr, on different device to home directory
+[W 2022-09-15 17:28:57.817 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.psq
+[W 2022-09-15 17:28:57.818 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.psq, on different device to home directory
+[W 2022-09-15 17:28:57.820 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573
+[W 2022-09-15 17:28:57.820 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573, on different device to home directory
+[W 2022-09-15 17:28:57.828 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573
+[W 2022-09-15 17:28:57.828 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573, on different device to home directory
+[W 2022-09-15 17:28:57.833 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.107.uniprot.tsv
+[W 2022-09-15 17:28:57.834 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.107.uniprot.tsv, on different device to home directory
+[W 2022-09-15 17:28:57.839 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.pep.all.fa
+[W 2022-09-15 17:28:57.839 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.pep.all.fa, on different device to home directory
+[W 2022-09-15 17:28:57.844 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa
+[W 2022-09-15 17:28:57.844 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa, on different device to home directory
+[W 2022-09-15 17:28:57.853 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv
+[W 2022-09-15 17:28:57.853 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv, on different device to home directory
+Traceback (most recent call last):
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/ipykernel_launcher.py", line 15, in <module>
+    from ipykernel import kernelapp as app
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/ipykernel/kernelapp.py", line 18, in <module>
+    from IPython.core.application import (
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/IPython/__init__.py", line 53, in <module>
+    from .terminal.embed import embed
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/IPython/terminal/embed.py", line 16, in <module>
+    from IPython.terminal.interactiveshell import TerminalInteractiveShell
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/IPython/terminal/interactiveshell.py", line 29, in <module>
+    from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/__init__.py", line 16, in <module>
+    from .application import Application
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/application/__init__.py", line 1, in <module>
+    from .application import Application
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 43, in <module>
+    from prompt_toolkit.buffer import Buffer
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/buffer.py", line 37, in <module>
+    from .completion import (
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/completion/__init__.py", line 1, in <module>
+    from .base import (
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/completion/base.py", line 9, in <module>
+    from prompt_toolkit.formatted_text import AnyFormattedText, StyleAndTextTuples
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/formatted_text/__init__.py", line 13, in <module>
+    from .ansi import ANSI
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/formatted_text/ansi.py", line 4, in <module>
+    from prompt_toolkit.output.vt100 import BG_ANSI_COLORS, FG_ANSI_COLORS
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/output/__init__.py", line 1, in <module>
+    from .base import DummyOutput, Output
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/output/base.py", line 7, in <module>
+    from prompt_toolkit.cursor_shapes import CursorShape
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/cursor_shapes.py", line 6, in <module>
+    from prompt_toolkit.key_binding.vi_state import InputMode
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 975, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_data
+KeyboardInterrupt
+[I 2022-09-15 17:29:02.595 ServerApp] Kernel restarted: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+[I 2022-09-15 17:29:02.633 ServerApp] Starting buffering for 7316ffc9-c373-454c-a27f-fc0494cba4b0:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-15 17:29:02.662 ServerApp] Restoring connection for 7316ffc9-c373-454c-a27f-fc0494cba4b0:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-15 17:29:14.026 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 17:31:14.154 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 17:37:14.304 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 17:39:14.427 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 17:58:43.192 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 18:00:24.480 ServerApp] Kernel interrupted: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+[I 2022-09-15 18:00:43.367 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 18:02:44.279 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 18:12:06.620 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 18:12:45.766 ServerApp] Kernel restarted: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+[I 2022-09-15 18:12:45.828 ServerApp] Starting buffering for 7316ffc9-c373-454c-a27f-fc0494cba4b0:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-15 18:12:45.861 ServerApp] Restoring connection for 7316ffc9-c373-454c-a27f-fc0494cba4b0:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-15 18:12:51.748 ServerApp] Kernel started: 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-15 18:12:51.749 ServerApp] Kernel shutdown: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+Traceback (most recent call last):
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/ipykernel_launcher.py", line 15, in <module>
+    from ipykernel import kernelapp as app
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/ipykernel/kernelapp.py", line 18, in <module>
+    from IPython.core.application import (
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/IPython/__init__.py", line 53, in <module>
+    from .terminal.embed import embed
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/IPython/terminal/embed.py", line 16, in <module>
+    from IPython.terminal.interactiveshell import TerminalInteractiveShell
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/IPython/terminal/interactiveshell.py", line 29, in <module>
+    from prompt_toolkit.auto_suggest import AutoSuggestFromHistory
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/__init__.py", line 16, in <module>
+    from .application import Application
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/application/__init__.py", line 1, in <module>
+    from .application import Application
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/application/application.py", line 43, in <module>
+    from prompt_toolkit.buffer import Buffer
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/buffer.py", line 37, in <module>
+    from .completion import (
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/completion/__init__.py", line 1, in <module>
+    from .base import (
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/completion/base.py", line 9, in <module>
+    from prompt_toolkit.formatted_text import AnyFormattedText, StyleAndTextTuples
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/formatted_text/__init__.py", line 13, in <module>
+    from .ansi import ANSI
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/formatted_text/ansi.py", line 4, in <module>
+    from prompt_toolkit.output.vt100 import BG_ANSI_COLORS, FG_ANSI_COLORS
+  File "/hpc/group/G_BIOSCIENZE/.conda/envs/cotr/lib/python3.10/site-packages/prompt_toolkit/output/__init__.py", line 3, in <module>
+    from .defaults import create_output
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 975, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_data
+KeyboardInterrupt
+[I 2022-09-15 18:12:51.932 ServerApp] Starting buffering for 7316ffc9-c373-454c-a27f-fc0494cba4b0:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-15 18:13:02.962 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[W 2022-09-15 18:13:45.768 ServerApp] Timeout waiting for kernel_info_reply: 7316ffc9-c373-454c-a27f-fc0494cba4b0
+[I 2022-09-15 18:15:03.143 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 18:17:03.499 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-15 20:58:06.419 ServerApp] Starting buffering for ca7c4404-c487-4634-b789-46fe1e8defd3:28a60229-24ee-4997-bf82-d7763520e9c1
+[I 2022-09-15 20:58:06.420 ServerApp] Starting buffering for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-15 20:58:06.420 ServerApp] Starting buffering for dee41da9-3fc1-4153-96d3-aa30995d6a33:5f8e6d3d-7596-4f1b-8b1c-475bb7c540d9
+[I 2022-09-15 20:58:06.421 ServerApp] Starting buffering for 9606179e-d060-4676-8025-8711fffe4579:50af8264-3b7d-4069-871c-74f7bf812143
+[I 2022-09-16 09:18:36.365 ServerApp] Restoring connection for dee41da9-3fc1-4153-96d3-aa30995d6a33:5f8e6d3d-7596-4f1b-8b1c-475bb7c540d9
+[I 2022-09-16 09:18:37.377 ServerApp] Restoring connection for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 09:18:38.609 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 09:18:43.379 ServerApp] Restoring connection for 9606179e-d060-4676-8025-8711fffe4579:50af8264-3b7d-4069-871c-74f7bf812143
+[I 2022-09-16 09:18:44.264 ServerApp] Restoring connection for ca7c4404-c487-4634-b789-46fe1e8defd3:28a60229-24ee-4997-bf82-d7763520e9c1
+[I 2022-09-16 09:20:42.310 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 09:22:42.396 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 09:22:58.989 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 09:50:59.073 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 09:52:59.684 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:01:01.835 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:03:01.909 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[W 2022-09-16 10:03:39.288 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.LRvJaccard.pdf
+[W 2022-09-16 10:03:39.289 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.LRvJaccard.pdf, on different device to home directory
+[W 2022-09-16 10:03:39.297 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.LRvJaccard
+[W 2022-09-16 10:03:39.298 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.LRvJaccard, on different device to home directory
+[W 2022-09-16 10:03:39.300 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.treencbi.pdf
+[W 2022-09-16 10:03:39.301 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.treencbi.pdf, on different device to home directory
+[W 2022-09-16 10:03:39.303 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.pen.pdf
+[W 2022-09-16 10:03:39.304 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.results.pen.pdf, on different device to home directory
+[W 2022-09-16 10:03:39.305 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.percentage
+[W 2022-09-16 10:03:39.306 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.percentage, on different device to home directory
+[W 2022-09-16 10:03:39.308 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.C
+[W 2022-09-16 10:03:39.322 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp.C, on different device to home directory
+[W 2022-09-16 10:03:39.332 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp
+[W 2022-09-16 10:03:39.332 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv.transitions.logp, on different device to home directory
+[W 2022-09-16 10:03:39.335 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast.C
+[W 2022-09-16 10:03:39.335 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:03:39.337 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast.C
+[W 2022-09-16 10:03:39.337 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:03:39.339 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast.C
+[W 2022-09-16 10:03:39.339 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:03:39.340 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast.C
+[W 2022-09-16 10:03:39.341 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:03:39.345 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast.C
+[W 2022-09-16 10:03:39.345 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:03:39.347 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast.C
+[W 2022-09-16 10:03:39.348 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:03:39.349 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast.C
+[W 2022-09-16 10:03:39.350 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:03:39.351 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast
+[W 2022-09-16 10:03:39.352 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:03:39.353 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast
+[W 2022-09-16 10:03:39.354 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:03:39.358 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast
+[W 2022-09-16 10:03:39.358 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:03:39.361 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast
+[W 2022-09-16 10:03:39.361 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:03:39.362 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast
+[W 2022-09-16 10:03:39.363 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:03:39.364 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast
+[W 2022-09-16 10:03:39.365 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:03:39.367 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573.mapped
+[W 2022-09-16 10:03:39.368 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573.mapped, on different device to home directory
+[W 2022-09-16 10:03:39.370 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast
+[W 2022-09-16 10:03:39.370 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:03:39.375 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573
+[W 2022-09-16 10:03:39.375 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573, on different device to home directory
+[W 2022-09-16 10:03:39.377 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pjs
+[W 2022-09-16 10:03:39.377 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pjs, on different device to home directory
+[W 2022-09-16 10:03:39.378 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.ptf
+[W 2022-09-16 10:03:39.378 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.ptf, on different device to home directory
+[W 2022-09-16 10:03:39.380 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pto
+[W 2022-09-16 10:03:39.380 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pto, on different device to home directory
+[W 2022-09-16 10:03:39.381 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pot
+[W 2022-09-16 10:03:39.381 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pot, on different device to home directory
+[W 2022-09-16 10:03:39.383 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pdb
+[W 2022-09-16 10:03:39.383 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pdb, on different device to home directory
+[W 2022-09-16 10:03:39.389 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.phr
+[W 2022-09-16 10:03:39.389 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.phr, on different device to home directory
+[W 2022-09-16 10:03:39.390 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.psq
+[W 2022-09-16 10:03:39.391 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.psq, on different device to home directory
+[W 2022-09-16 10:03:39.392 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pin
+[W 2022-09-16 10:03:39.393 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pin, on different device to home directory
+[W 2022-09-16 10:03:39.394 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573
+[W 2022-09-16 10:03:39.395 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573, on different device to home directory
+[W 2022-09-16 10:03:39.396 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573
+[W 2022-09-16 10:03:39.397 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573, on different device to home directory
+[W 2022-09-16 10:03:39.399 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.107.uniprot.tsv
+[W 2022-09-16 10:03:39.400 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.107.uniprot.tsv, on different device to home directory
+[W 2022-09-16 10:03:39.404 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa
+[W 2022-09-16 10:03:39.404 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa, on different device to home directory
+[W 2022-09-16 10:03:39.406 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.pep.all.fa
+[W 2022-09-16 10:03:39.406 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.pep.all.fa, on different device to home directory
+[W 2022-09-16 10:03:39.408 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv
+[W 2022-09-16 10:03:39.408 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv, on different device to home directory
+[I 2022-09-16 10:03:43.933 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:03:44.716 ServerApp] Kernel restarted: 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-16 10:03:44.726 ServerApp] Starting buffering for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:03:44.735 ServerApp] Restoring connection for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[W 2022-09-16 10:03:49.256 ServerApp] Nudge: attempt 10 on kernel 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[W 2022-09-16 10:03:54.280 ServerApp] Nudge: attempt 20 on kernel 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[W 2022-09-16 10:03:59.304 ServerApp] Nudge: attempt 30 on kernel 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-16 10:04:14.382 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:04:23.466 ServerApp] Kernel restarted: 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-16 10:04:23.474 ServerApp] Starting buffering for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:04:23.480 ServerApp] Restoring connection for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:04:29.536 ServerApp] Kernel restarted: 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-16 10:04:29.541 ServerApp] Starting buffering for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:04:29.547 ServerApp] Restoring connection for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:06:14.445 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:18:14.522 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:20:14.582 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:55:56.494 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:57:53.647 ServerApp] Kernel interrupted: 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-16 10:57:56.563 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:57:58.941 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:58:02.303 ServerApp] Kernel restarted: 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-16 10:58:02.315 ServerApp] Starting buffering for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:58:02.322 ServerApp] Restoring connection for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[W 2022-09-16 10:58:07.619 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast.C
+[W 2022-09-16 10:58:07.620 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:58:07.625 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast.C
+[W 2022-09-16 10:58:07.626 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:58:07.628 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast.C
+[W 2022-09-16 10:58:07.628 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:58:07.631 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast
+[W 2022-09-16 10:58:07.632 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.R1.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:58:07.633 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast.C
+[W 2022-09-16 10:58:07.633 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:58:07.640 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast.C
+[W 2022-09-16 10:58:07.641 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast.C, on different device to home directory
+[W 2022-09-16 10:58:07.644 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast
+[W 2022-09-16 10:58:07.644 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.NL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:58:07.645 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast
+[W 2022-09-16 10:58:07.645 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LR.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:58:07.647 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast
+[W 2022-09-16 10:58:07.648 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.LL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:58:07.649 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast
+[W 2022-09-16 10:58:07.649 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LR.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:58:07.650 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast
+[W 2022-09-16 10:58:07.650 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.ncbi.LL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:58:07.652 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast
+[W 2022-09-16 10:58:07.652 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Eukaryota.test.tree.NL.csv.num.yeast, on different device to home directory
+[W 2022-09-16 10:58:07.654 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573.mapped
+[W 2022-09-16 10:58:07.654 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573.mapped, on different device to home directory
+[W 2022-09-16 10:58:07.655 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573
+[W 2022-09-16 10:58:07.655 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/ye288ye1573, on different device to home directory
+[W 2022-09-16 10:58:07.658 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pjs
+[W 2022-09-16 10:58:07.658 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pjs, on different device to home directory
+[W 2022-09-16 10:58:07.659 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.ptf
+[W 2022-09-16 10:58:07.659 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.ptf, on different device to home directory
+[W 2022-09-16 10:58:07.660 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pto
+[W 2022-09-16 10:58:07.661 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pto, on different device to home directory
+[W 2022-09-16 10:58:07.661 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pot
+[W 2022-09-16 10:58:07.662 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pot, on different device to home directory
+[W 2022-09-16 10:58:07.664 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pdb
+[W 2022-09-16 10:58:07.664 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pdb, on different device to home directory
+[W 2022-09-16 10:58:07.665 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.phr
+[W 2022-09-16 10:58:07.665 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.phr, on different device to home directory
+[W 2022-09-16 10:58:07.667 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.psq
+[W 2022-09-16 10:58:07.667 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.psq, on different device to home directory
+[W 2022-09-16 10:58:07.668 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pin
+[W 2022-09-16 10:58:07.668 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pin, on different device to home directory
+[W 2022-09-16 10:58:07.669 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573
+[W 2022-09-16 10:58:07.669 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_OG2genes.tab.gz.YJM1573, on different device to home directory
+[W 2022-09-16 10:58:07.670 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573
+[W 2022-09-16 10:58:07.670 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/odb10v1_gene_xrefs.tab.gz.YJM1573, on different device to home directory
+[W 2022-09-16 10:58:07.673 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.107.uniprot.tsv
+[W 2022-09-16 10:58:07.673 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.107.uniprot.tsv, on different device to home directory
+[W 2022-09-16 10:58:07.674 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa
+[W 2022-09-16 10:58:07.674 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa, on different device to home directory
+[W 2022-09-16 10:58:07.677 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.pep.all.fa
+[W 2022-09-16 10:58:07.678 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/Saccharomyces_cerevisiae.R64-1-1.pep.all.fa, on different device to home directory
+[W 2022-09-16 10:58:07.680 ServerApp] delete /G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv
+[W 2022-09-16 10:58:07.681 ServerApp] Skipping trash for /hpc/home/carlo.derito/G_BIOSCIENZE/concordant/Cotransitions/Notebook/validation/yeastw_opt.csv, on different device to home directory
+[I 2022-09-16 10:58:13.899 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+[I 2022-09-16 10:58:20.460 ServerApp] Kernel restarted: 210f18c4-f6a5-4ee3-8955-bae3641b1034
+[I 2022-09-16 10:58:20.465 ServerApp] Starting buffering for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:58:20.471 ServerApp] Restoring connection for 210f18c4-f6a5-4ee3-8955-bae3641b1034:c9598c9b-456c-4628-a96c-961c3840412b
+[I 2022-09-16 10:59:02.597 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+Future exception was never retrieved
+future: <Future finished exception=TimeoutError('Timeout waiting for restart')>
+TimeoutError: Timeout waiting for restart
+[I 2022-09-16 11:09:02.670 ServerApp] Saving file at /G_BIOSCIENZE/concordant/Cotransitions/Notebook/Validation.ipynb
+/var/spool/slurm/slurmd/job1782806/slurm_script: line 26: 91806 Errore di bus           jupyter-lab --no-browser --port $port
+slurmstepd: error: Detected 20 oom-kill event(s) in step 1782806.batch cgroup. Some of your processes may have been killed by the cgroup out-of-memory handler.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.

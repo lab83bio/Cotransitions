@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+#cotr pipeline
+
+level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
+tree="raxml" #raxml|ncbi|random
+ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
+ncores=10
+
+#read Orthodb tables
+Utilities/procedure_Orthodb_read_tables.r -l $level
+
+#taxonomy-constrained tree with RaxML [comment if not using a resolved tree]
+raxmlHPC-PTHREADS -g $level.phylip.tree -s $level.phylip.data -n $level -m BINCAT -p 33 -T $ncores
+
+#order tables by trees
+for d in ${ladder[@]}; do 
+    Utilities/procedure_Orthodb_order_by_tree.r $level.RData -t raxml -d $d -o Viridiplantae &
+done
+wait
+
+
+#cotr analysis
+for d in ${ladder[@]}; do 
+    ./cotr_transitions.py $level.$tree.$d.csv.num | ./cotr_Fisher.r -p 1e-3 - > $level.$tree.$d.transitions.annotated &
+done
+wait
+
+#results intersections
+cat $level.$tree.*.transitions.annotated | perl -anE 'print if ($F[7]>0 and $F[10]<1e-3 or $F[0]=~"Orthogroup")' | cut -f1,2 | sort | uniq -dc| grep -w ${#ladder[@]} | cut -b9- > common.txt 
+grep -w -f common.txt $level.$tree.${ladder[0]}.transitions.annotated > intersection.$level.$tree.${ladder[0]}.transitions.annotated
+
+#cluster with mcl
+Utilities/procedure_mcl_clusters.pl $level.$tree.${ladder[0]}.csv intersection.$level.$tree.${ladder[0]}.transitions.annotated
+
