@@ -22,7 +22,8 @@ The installation is successful if `(cotr)` in the command line prompt
 ```
 
 ## Usage
-To run the whole pipeline, please modify with your parameters in the `cotr_pipeline` VARAIBLES section:
+To run the whole pipeline, please modify with your parameters in the `cotr_pipeline` VARAIBLES section. <br>
+For example:
 ```bash
 level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
 tree="raxml" #raxml|ncbi|random
