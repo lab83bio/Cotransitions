@@ -1,6 +1,6 @@
 # Cotransitions
 Statistical analysis of co-evolutionary transitions among genes.<br><br>
-[![DOI](https://zenodo.org/badge/DOI/xxxx/zenodo.xxxx.svg)](https://doi.org/xxxx/zenodo.xxx) 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7095966.svg)](https://doi.org/10.5281/zenodo.7095966) 
 <br><br>
 
 
