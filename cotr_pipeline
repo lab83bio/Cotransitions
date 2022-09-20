@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 #cotr pipeline
 
-################
-DEFINE VARIABLES
-################
+##################
+# DEFINE VARIABLES
+##################
 
-level="Bacteria" #"Bacteria", "Archaea" (faster), "Mammalia", etc
+level="Archaea" #"Bacteria", "Archaea" (faster), "Mammalia", etc
 tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=25
 
-###############################################
-make directory example "Eukaryota_20-09-2022_0"
-###############################################
+#################################################
+# MAKE OUTDIR (example: "Eukaryota_20-09-2022_0")
+#################################################
 
 cwd=`realpath .`
 date=`date '+%d-%m-%Y'`
@@ -23,9 +23,9 @@ do
 done
 cd ${level}_${date}_${n}
 
-###############
-START PIPLELINE
-###############
+#################
+# START PIPLELINE
+#################
 
 ${cwd}/Utilities/procedure_Orthodb_read_tables.r -l $level
 
