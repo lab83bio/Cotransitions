@@ -22,7 +22,17 @@ The installation is successful if `(cotr)` in the command line prompt
 ```
 
 ## Usage
-
+To run the whole pipeline, please modify with your parameters in the `cotr_pipeline` VARAIBLES section:
+```bash
+level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
+tree="raxml" #raxml|ncbi|random
+ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
+ncores=25
+```
+then you can run
+```bash
+./cotr_pipeline
+```
 ## Notebook usage
 [*Concordant.ipynb*](https://github.com/lab83bio/Cotransitions/blob/master/Notebook/Concordant.ipynb) and
 [*Validation.ipynb*](https://github.com/lab83bio/Cotransitions/blob/master/Notebook/Validation.ipynb) files can be opened with `jupyter-lab` included in `cotr` conda environment <br>
