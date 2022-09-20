@@ -5,7 +5,7 @@
 # DEFINE VARIABLES
 ##################
 
-level="Archaea" #"Bacteria", "Archaea" (faster), "Mammalia", etc
+level="Bacteria" #"Bacteria", "Archaea" (faster), "Mammalia", etc
 tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=25
@@ -17,7 +17,7 @@ ncores=25
 cwd=`realpath .`
 date=`date '+%d-%m-%Y'`
 n=0
-while ! mkdir ${level}_${date}_${n}
+while ! mkdir -p ${level}_${date}_${n}
 do     
     n=$((n+1))
 done
