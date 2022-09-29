@@ -2,9 +2,10 @@
 
 import pandas as pd
 import json, urllib
-import tqdm
+import tqdm, sys
 
-outfile = '../external/ko_og_pathway.tsv'
+outfile = 'external/ko_og_pathway.tsv'
+level = sys.argv[1]
 
 kegg_ko_reaction = pd.read_table('http://rest.kegg.jp/link/ko/pathway', 
                                  header=None, names=['reaction', 'ko'])
@@ -13,7 +14,7 @@ ko_set = {x.split(':')[1] for x in kegg_ko_reaction['ko'].to_list()}
 
 def get_og(ko):
     try:
-        j = pd.read_table(f"https://www.orthodb.org/tab?query={ko}&level=2759")
+        j = pd.read_table(f"https://www.orthodb.org/tab?query={ko}&level={level}")
                         
         j = j.groupby('pub_og_id')['og_name'].count().reset_index()
         j.columns = ['og', 'count']
