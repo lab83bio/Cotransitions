@@ -3,4 +3,6 @@
 conda create  --name cotr --file cotr_env.txt
 conda activate cotr
 Rscript -e 'install.packages("corpora",repos="http://cran.us.r-project.org")'
+Rscript -e 'install.packages("TSDT",repos="http://cran.us.r-project.org")'
+Rscript -e 'install.packages("ggvenn",repos="http://cran.us.r-project.org")'
 pip3 install git+https://github.com/mojaie/pygosemsim.git
