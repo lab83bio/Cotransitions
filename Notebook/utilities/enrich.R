@@ -14,7 +14,7 @@ args <- parser$parse_args()
 file = args$input_file
 cutoff = args$pval_cutoff
 
-BP = read.csv(file=file, sep='\t')
+BP = read.csv(file, sep='\t')
 BP = BP[order(-BP$score),]
 
 BP_nodup = distinct(BP, name, .keep_all = TRUE)
@@ -26,4 +26,5 @@ geneDataNames = as.data.frame(BP[,c('feature','description')])
 BPgsea = GSEA(geneList, TERM2GENE=geneData, TERM2NAME=geneDataNames, 
               pvalueCutoff=1, seed=2022, maxGSSize=100000, minGSSize=1, eps = 0)
 
-write.csv(as.data.frame(BPgsea), paste(file, '.enriched', sep=''))
+print(paste(basename(file), '.enriched', sep=''))
+write.csv(as.data.frame(BPgsea), paste(basename(file), '.enriched', sep=''))
