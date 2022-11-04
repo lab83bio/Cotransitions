@@ -1,0 +1,22 @@
+{
+  "version": "1.2",
+  "dbname": "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa",
+  "number-of-letters": 2682983,
+  "number-of-sequences": 5451,
+  "last-updated": "2022-11-04T10:59:00",
+  "number-of-volumes": 1,
+  "bytes-total": 4208355,
+  "bytes-to-cache": 2732259,
+  "files": [
+    "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pdb",
+    "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.phr",
+    "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pin",
+    "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pot",
+    "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.psq",
+    "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.ptf",
+    "Saccharomyces_cerevisiae_yjm1573_gca_000978255.Sc_YJM1573_v1.pep.all.fa.pto"
+  ]
+}
