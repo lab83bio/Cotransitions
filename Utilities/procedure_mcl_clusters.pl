@@ -3,7 +3,7 @@
 # Clusterize annotated results ".transitions.annotated" (with score and probabilities) with mcl
 #
 use strict;
-#use Getopt::Long;
+#use Getopt::Long; 
 
 my $usage="$0 cvs_file transition_file\n";
 
