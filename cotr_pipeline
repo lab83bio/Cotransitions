@@ -6,6 +6,7 @@ tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=10
 
+
 #read Orthodb tables
 Utilities/procedure_Orthodb_read_tables.r -l $level
 
