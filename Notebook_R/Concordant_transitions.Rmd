@@ -1,0 +1,136 @@
+---
+title: "R Notebook - cotr analysis"
+output:
+  html_document:
+    df_print: paged
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. 
+
+
+```{r}
+library(data.table)
+library(ggplot2)
+```
+Load gene presence table and transitions table
+```{r results='hide',message=FALSE}
+zenodo = "https://zenodo.org/record/7095966/files/"
+trsfile="Eukaryota.raxml.RL.transitions.annotated"
+trs<-fread(paste0(zenodo,trsfile),sep="\t", header = TRUE, fill=TRUE)
+csvfile="Eukaryota.raxml.RL.csv.num_m"
+csv<-fread(paste0(zenodo,csvfile),sep="\t", header = FALSE, fill=TRUE)
+```
+total pairs
+```{r}
+lengths(trs)
+```
+Pairs with significant p.adj (by score)
+```{r}
+table(cut(trs[p.adj<1e-3]$k_score, breaks=seq(-1,1, by=1)))
+```
+Transition statistics
+```{r}
+summary(trs[p.adj<1e-3])
+```
+
+Volcano plot of transitions (Fig 2A)
+```{r}
+p <- ggplot(data=trs, aes(x=k_score, y=-log10(p.adj))) + 
+     geom_count(size=.4,aes(color=after_stat(log10(n)) ))  + 
+     geom_hline(yintercept=3, linetype="dashed", color = "gray30", linewidth=0.5)+
+     xlim(-1,1)+ theme_light() + scale_color_continuous(low="#2B1100",high="#FF7F2A")+
+    labs(x="cotr_score") + theme(legend.text = element_text(size=7),legend.title = element_text(size=9), legend.key.size = unit(0.4, 'cm'))
+print(p)
+ggsave("transition_volcano.pdf",w=10,h=6 ,units = "cm", limitsize = FALSE)
+```
+Zoom on cutoff value (Fig. S2)
+
+```{r}
+p <- ggplot(data=trs, aes(x=-log10(p), y=-log10(p.adj))) + 
+     geom_count(aes(color=log10(..n..) ))  + 
+     geom_hline(yintercept=3, linetype="dashed", color = "gray30", size=0.5)+
+     geom_vline(xintercept=-log10(tail(trs[p.adj<1e-3,p],n=1)), linetype="dashed", color = "gray30", linewidth=0.5)+
+     theme_light() + scale_color_continuous(low="#2B1100",high="#FF7F2A")+
+     scale_x_continuous(breaks=seq(3,18,1), limits = c(3,18))
+print(p)
+ggsave("transition_p-value.pdf",w=15,h=10 ,units = "cm", limitsize = FALSE)
+
+```
+Density plot
+```{r}
+trs$significant=trs$p.adj<1e-3
+ggplot(data=trs, aes(x=k_score,color=significant,fill=significant))+
+  geom_density(alpha=0.5,adjust=1)+theme_linedraw()+xlim(-1,1) +labs(x="cotr_score")
+```
+Sequence similarity between associated orthogroups (Fig S3)
+
+```{r Fig. S3, results='hide', message=FALSE}
+library(Biostrings)
+
+Download_Orthogroup_seq <- function(OG_vector, num_seq) {
+  set.seed(42) #sample num_seq per Orthogroups
+  Odb <- "https://v101.orthodb.org/pgrest/rpc/fasta?id="
+  fasta <- lapply(OG_vector, function (x) sample(readAAStringSet(paste0(Odb,x)),num_seq))
+  names(fasta) <- OG_vector
+  return(fasta)
+}
+   
+Compare_Orthogroup_seq <- function(O1,O2,fasta) {
+  #Max id in pairwise comparison
+  id <- lapply(fasta[[O1]], function(x) pid(pairwiseAlignment(fasta[[O2]],x)))
+  #print(paste(O1,O2,id))
+  return(max(unlist(id)))
+}
+set.seed(42)
+neg_k_score = trs[trs[,k_score<0 & p.adj<1e-5]]
+pos_k_score = trs[trs[,k_score>0 & p.adj<1e-5]]
+trs_sample <- rbind(neg_k_score[sample(.N,100)], pos_k_score[sample(.N,100)])
+trs_sample <- trs_sample[,.SD,.SDcols=c("Orthogroup1","Orthogroup2","p.adj","k_score")]
+random_pairs <- data.table(Orthogroup1=sample(trs_sample$Orthogroup1,100),
+                           Orthogroup2=sample(trs_sample$Orthogroup2,100),
+                           p.adj=NA, k_score=NA)
+trs_sample <- rbind(trs_sample,random_pairs)
+fasta <-  Download_Orthogroup_seq(unique(c(trs_sample$Orthogroup1,trs_sample$Orthogroup2)),5)  #5 seq per outgroup
+trs_sample[,id:=mapply(Compare_Orthogroup_seq, Orthogroup1,Orthogroup2,MoreArgs=list(fasta))]
+```
+
+Plot similarity for positive and negative k_scores
+```{r}
+trs_sample[,group:=ifelse(k_score>0,"cotr_score>0","cotr_score<0")]
+trs_sample$group[is.na(trs_sample$group)]<-"random pairs"
+ggplot(trs_sample, aes(x=group,y=id))+geom_boxplot(width=0.5, fill="slateblue",, alpha=0.2)+ylim(0,100)+xlab ("")+ylab("pairwise OG identity (%)") 
+ggsave("sequence_similarity_cotr.pdf",w=12,h=8 ,units = "cm", limitsize = FALSE)
+```
+
+
+
+Average genes per genome per orthogroup
+
+```{r}
+csv[csv==0]<-NA
+csv2 <- csv[,.(OG=V1, AVG = rowMeans(.SD, na.rm=TRUE), MultiFraction = rowSums(.SD>1, na.rm=TRUE)/rowSums(.SD, na.rm=TRUE)), .SDcols=2:NCOL(csv)]
+summary(csv2[,2:3])
+```
+
+Most significant p.adj values per orthogroup
+
+```{r}
+trs2 <- melt(trs,id.vars=c("p.adj","k_score"),measure.vars=c("Orthogroup1","Orthogroup2"), value.name = "OG")
+trs2 <- trs2[, .SD[which.min(p.adj)], by= OG]
+trs2 <- trs2[k_score>0]
+#merge
+merged <- merge(trs2,csv2, by = "OG", all=F)
+merged <- merged[,.SD,.SDcols=c("OG","AVG","MultiFraction","p.adj")]
+
+```
+
+Plot
+```{r}
+
+merged$p.adj_interval <- cut(merged$p.adj, breaks=c(1e-100,1e-5,1e-4,1e-3,1e-2,1e-1,1)) #intervals with equal number of observations
+ggplot(merged, aes(x=p.adj_interval,y=AVG))+geom_boxplot(alpha=0.1)+ylim(0,6)+xlab ("p.adj interval")+ylab("Average gene multiplicity")
+```
+No differences
+
+```
+

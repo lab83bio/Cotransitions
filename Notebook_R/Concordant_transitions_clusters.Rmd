@@ -1,0 +1,612 @@
+---
+title: "R Notebook - cotr module analysis"
+output:
+  html_document:
+    df_print: paged
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. 
+
+
+```{r}
+library(data.table)
+library(tibble)
+library(plyr)
+library(taxize)
+library(ggplot2)
+library(viridis)
+```
+Files download from zenodo
+```{r}
+zenodo = "https://zenodo.org/record/7095966/files/"
+clufile="intersection.Eukaryota.raxml.RL.clusters"
+numfile="Eukaryota.raxml.RL.csv.num"
+csvfile="Eukaryota.raxml.RL.csv"
+for (f in c(clufile,numfile,csvfile)) {
+  if (!file.exists(f)) {
+    download.file(paste0(zenodo,f),destfile=f)
+  }
+}
+```
+Load gene presence table and clusters
+```{r}
+
+clu.list <- lapply(strsplit(readLines(clufile),"\t"), as.character)
+num<-fread(numfile,sep="\t", header = F)
+csv<-fread(file=csvfile,sep="\t")
+```
+
+#How many orthogroups per cluster (module)?
+```{r}
+clu.list[lengths(clu.list)==1] <- NULL
+d <- table(lengths(clu.list))
+d
+```
+Module size distribution (Fig. 2B)
+```{r}
+dt <- as.data.table(d)
+colnames(dt) <- c("Module.size","Modules")
+dt$Orthogroups=as.integer(as.numeric(dt$Module.size) * as.numeric(dt$Modules))
+dt <- melt(dt, id.vars='Module.size')
+bins <- ifelse(as.numeric(dt$Module.size)<10, dt$Module.size,"10+" )
+dt$Module.size <- factor(bins,levels = c(2:9,"10+"))
+dt$variable <- factor(dt$variable, levels=c("Orthogroups","Modules"))
+dt <- dt[,.(Count=sum(as.numeric(value))),by=.(variable,Module.size)]
+ggplot(dt, aes(Module.size, Count, fill=variable))+                                # Draw barchart 
+  geom_col(position='dodge') + scale_fill_manual(values=c("gray80","gray40")) + labs(fill = "") +
+  scale_y_continuous(limits = c(0,3000), expand = c(0,10)) + theme_light() +  theme(legend.position = c(0.7, 0.75))
+ggsave("cluster_distribution.pdf",w=7,h=6 ,units = "cm", limitsize = FALSE)
+```
+Modules with size>2
+```{r}
+dt[dt$Module.size != '2', sum(Count),by="variable"]
+```
+
+#Genome Taxonomy
+
+```{r}
+select_rank <- function (n,r,rank,row) {
+  if (length(n[r==rank]>0)) {
+    return(n[r==rank])
+  }
+  return(n[row])
+}
+Genome_ids <- names(csv)[3:ncol(csv)]
+Taxids <- gsub("\\_.*","",Genome_ids)
+cl <- classification(Taxids,db='ncbi')
+names(cl) <- Genome_ids
+cl_d<-do.call("rbind", cl)
+
+cl_d$Genome_id=gsub("\\..*","",row.names(cl_d))
+cl_d <- as.data.table(cl_d)
+cl_d <- cl_d[, list(rank0=select_rank(name,rank,"superkingdom",2),
+                    rank1=select_rank(name,rank,"kingdom",3),
+                    rank2=select_rank(name,rank,"phylum",4),
+                    rank3=select_rank(name,rank,"class",5),
+                    rank4=select_rank(name,rank,"order",6),
+                    rank5=select_rank(name,rank,"family",7),
+                    rank6=select_rank(name,rank,"species",8)), by=Genome_id]
+
+rank_names=c("superkingdom","kingdom","phylum","class","order","family","species")
+write.table(cl_d, file="Taxid_taxonomy.csv",quote=F, sep="\t", row.names=F)
+
+f_names <- table(unlist(apply(cl_d[,2:6], 1, unique)))
+cl_d
+```
+
+Genomes by species at the kingdom level:
+```{r}
+sort(table(cl_d$rank1)) #kingdom level
+```
+
+
+Convert into data frame with average presence per cluster
+```{r}
+
+clu.dt <- as.data.table(do.call(rbind,mapply(cbind,clu.list,cluster=(1:length(clu.list)))))
+#clu.dt <- clu.dt[cluster %in% 1:10] #Cluster interval - comment for the full interval
+merged <- merge(clu.dt,num,by="V1")
+colnames(merged)[3:ncol(merged)] <- Genome_ids
+merged_m <- merged[,lapply(.SD, mean),.SDcols=3:NCOL(merged),by=cluster]
+#merged_m[,2:ncol(merged_m)] <- merged_m[,2:ncol(merged_m)] / apply(as.matrix(merged_m[,2:ncol(merged_m)]),1,max) # norm 01
+merged_m <- merged_m[order(as.numeric(merged_m$cluster))]
+clu_means <- merged_m[,2:ncol(merged_m)]
+hc <- hclust(dist(clu_means, method='canberra')) #Hierarchical clustering of clusters (zeroes are not counted)
+merged_mm <- melt(merged_m,id="cluster",variable="Genome_id")
+merged_mm$cluster<-factor(x=merged_mm$cluster, levels=unique(merged_mm$cluster[(hc$order)]))
+
+#add taxonomy
+merged_mm <- plyr::join(merged_mm,cl_d,by="Genome_id") # join keep df1 order
+
+```
+Plot heatmap (Fig. 2C)
+```{r}
+
+ys = length(unique(merged_mm$cluster))/100
+cols=colnames(merged_mm)[grepl("rank",colnames(merged_mm))] #convert rank to factors
+merged_mm[,(cols) := lapply(.SD, function(x) factor(x,levels=unique(x))), .SDcols = cols]
+main_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=50,x,ifelse(f_names[x]>=20,substr(x,1,1)," " ))) 
+  return(unlist(short))
+}
+main.labs = lapply(merged_mm[,..cols], main_labels)
+ 
+ggplot(merged_mm, aes(x = Genome_id, y = cluster, fill = value)) +
+      facet_grid(. ~ rank1 , scales='free_x', space = "free_x", labeller=labeller(rank1=main.labs[["rank1"]])) +
+        theme(strip.text = element_text(size = rel(0.6)),
+            axis.ticks.x = element_blank(),
+            axis.text.x = element_blank(),
+            axis.ticks.y = element_blank(),
+            axis.text.y = element_blank(),
+            strip.background=element_rect(color="grey30", fill="grey90",linewidth =0.1),
+            panel.spacing = unit(0.0, "pt")
+            ) +
+            labs(x=paste0("- ",length(unique(merged_mm$Genome_id))," Genomes -"), 
+                 y=paste0("- ",length(unique(merged_mm$cluster))," Modules", " (",lengths(clu.dt[cluster %in%                                          merged_mm$cluster])[1]," Orthogroups) -" ) )+
+            scale_fill_viridis() + geom_tile() 
+      
+ggsave("cluster_heatmap.png",w=18,h=0+0.4*ys ,units = "cm", limitsize = FALSE,dpi=600)
+```
+Taxonomy distribution table (Fig. S5)
+```{r}
+ttt=list()
+ranks=c("rank1","rank2", "rank3","rank4","rank5" )
+assigned=list() #clusters assigned to a taxonomic rank
+for(i in ranks){ #each rank
+  merged_mm$sel_rank <- merged_mm[,..i]
+  t_mm <- dcast(merged_mm, factor(cluster,levels=unique(cluster)) ~ sel_rank, fun=length,  subset=.(value>0.5))[,-1]
+  colMax <- sapply(t_mm, max, na.rm = TRUE)
+  t_mmf <-sweep(t_mm, 2, colMax, FUN = '/')
+  t_mmf <- t_mmf[,which(colMax>5)] # consider only groups with >5 species
+
+  for(c in 1:length(t_mmf[,1])){ #each cluster
+    present <- colnames(t_mmf)[which(t_mmf[c,] > .5)]
+    if(is.null(assigned[[as.character(c)]]) && length(present)>0) {
+      ttt[[i]][[c]] <-  as.list(present)
+      assigned[[as.character(c)]] <- i
+    }
+    else { 
+      ttt[[i]][[c]] <-  as.list(NA)
+    }
+  }
+}
+
+merged_mm$sel_rank <- NULL
+sss <- as.data.table(do.call(cbind,lapply(ttt,function(x) lapply(x,unlist))))
+sss <- rowid_to_column(sss,"Cluster")
+sss$no_rank <- as.list(apply(sss[,2:6],1,function(x) if(all(is.na(x))) {"unspecified"} else{NA}))
+sss_m <- melt(sss,id.var="Cluster", variable.name = "rank_of_prevalence", value.name = "taxonomy")
+sss_m <- sss_m[!is.na(taxonomy),] [order(Cluster)]
+sss_m[,rank_of_prevalence:=rank_names[match(sss_m$rank_of_prevalence,ranks)+1],]
+sss_m$supermodule <- cutree(hc,k=50) # 50 supermodules
+fwrite(sss_m, file="Cluster_taxonomy.csv",quote=F, sep="\t", row.names=F)
+
+#prevalence <- apply(sss,2,function(x) table(!is.na(x)))
+prevalence<-table(sss_m$rank_of_prevalence)[rank_names[2:6]]
+prevalence
+```
+#Barchart of rank prevalence
+```{r}
+library(RColorBrewer)
+prev <- as.data.frame(prevalence)
+mycolors <-   brewer.pal(length(prev$Var1),'Set1')
+rank<- rep("rank", 5)
+ggplot(prev, aes(x="", y=Freq, fill=reorder(Var1,5:1)) )+                                
+  geom_bar(stat="identity") + scale_fill_manual(values=mycolors) + labs(fill = "Rank") +
+  geom_text(aes(label = paste0(Freq)),
+            position = position_stack(vjust = 0.5)) +
+  scale_y_continuous(limits = c(0,2461)) + 
+  theme_minimal(base_size = 12) + xlab("Rank level of prevalence")
+  
+ggsave("cluster_taxonomy.pdf",w=10,h=10 ,units = "cm", limitsize = FALSE)
+
+```
+Pie charts of taxonomic group prevalence (Fig. S5)
+
+```{r}
+ggpie <- function (dat, by, totals,pal) {
+ggplot(dat, aes(x=factor(1), y=.data[[totals]], fill=.data[[by]])) +
+geom_bar(stat='identity', color='black') +
+scale_fill_brewer(palette = pal) +
+guides(fill=guide_legend(override.aes=list(colour=NA))) + # removes black borders from legend
+coord_polar(theta='y') +
+theme(axis.ticks=element_blank(),
+axis.text.y=element_blank(),
+axis.text.x=element_text(colour='black'),
+axis.title=element_blank(),
+) +
+scale_y_continuous()
+}
+p1=list()
+my_palettes <- c(kingdom="Oranges", phylum="Purples",class="Greens",order="Blues",family="Reds")
+for (r in rank_names[2:6]){
+  dt <- as.data.table(table(unlist(sss_m[rank_of_prevalence==r,taxonomy])))
+  dt <- dt[order(dt$N)]
+  dt$V1[!dt$V1 %in% tail(dt$V1,8)]<-"Others" #8 most common taxa
+  dt<-dt[,.(N = sum(N)),by=V1]
+  dt$Taxa <- factor(dt$V1,level=dt$V1)
+  dt<-dt[,percent := N/sum(N)*100]
+  #print(paste(dt))
+  p1[[r]] <- ggpie(dt, by='Taxa', totals='percent',pal=my_palettes[r])+ggtitle(paste("Rank level: ",r))
+  ggsave(paste0("cluster_taxonomy_",r,".pdf"),w=10,h=10 ,units = "cm", limitsize = FALSE)
+}
+print(p1)
+```
+
+Where is the signal (Fig. S6A)
+```{r}
+library(RColorBrewer)
+#library(ggrepel)
+selected_cluster=0
+#selected_cluster=1003 #comment for all clusters
+V <- as.data.frame(apply(merged_m[,2:ncol(merged_m)],1,diff)) # iterated differences
+V <- abs(V)
+if (selected_cluster>0) {
+  V <- V[,selected_cluster,drop=F]
+  V[V<=0.5] <- 0
+  V[which(V + unlist(data.table::shift(V, n=1, fill=FALSE, type="lag"))>1),] <- 0 #do not consider consecutive transitions
+}
+
+#Realative cotr signal (N)
+Vdf <- data.table(Genome_id=row.names(V),N=rowSums(V>0.5)/max(rowSums(V>0.5)))
+Vdf <- join(Vdf,cl_d,by="Genome_id") #add taxonomy
+Vdf$Genome_id  <- factor(Vdf$Genome_id, levels=Vdf$Genome_id)
+
+cols <- brewer.pal(length(unique(Vdf$rank1)), "Paired")
+names(cols)=unique(Vdf$rank1)
+Vdf$lab <- "" #label onliy if N>0.25
+Vdf$lab[which(Vdf$N>0.25)] <- as.character(Vdf[N>0.25,Genome_id])
+ggplot(data=Vdf,mapping=aes(x=Genome_id,y=N, color=rank1, labels=lab))+
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=5),
+      panel.border     = element_blank(),
+      panel.grid = element_blank(),
+      legend.key.height = unit(0.5, "cm"))+
+      geom_point()+scale_color_manual(values=cols)+
+      scale_x_discrete( breaks=Vdf$Genome_id[which(Vdf$N>0.25)], labels=Vdf[N>0.25,Genome_id],guide = guide_axis(check.overlap = TRUE))+
+      ylab("Relative cotr signal") #+ geom_text_repel(size=2, label=Vdf$lab, color="black")
+ggsave("cluster_cotr_signal.pdf",w=17,h=9 ,units = "cm", limitsize = FALSE)
+     
+```
+Taxonomic intersection bar plot (Fig. S6B)
+```{r}
+tax_diff <- function (dt){
+  td=rep(NA,NROW(dt))
+  for (r in 2:NROW(dt)){
+    for (c in 1:NCOL(dt)){
+      if(dt[r,..c] != dt[r-1,..c]){
+        td[r] <- paste0("(",rank_names[c],") ",dt[r-1,..c],"-",dt[r,..c])
+        break
+      }
+    }
+  }
+  return(td)
+}
+Vdf$td = tax_diff(Vdf[,3:9])
+Vdf_best <- Vdf[which(Vdf$N>0.25)]
+ggplot()+
+      geom_col(data=Vdf_best,mapping=aes(x=rev(Genome_id),y=N, fill=rank1))+
+      scale_fill_manual(values=cols[names(cols) %in% unique(Vdf_best$rank1)])+
+      theme(axis.text = element_text(size=7),
+      panel.border    = element_blank(),
+      panel.grid      = element_blank())+
+      scale_x_discrete( labels=rev(Vdf_best$td))+xlab("")+ylab("Relative cotr signal (>0.25)")+
+      coord_flip() 
+ggsave("cluster_cotr_signal2.pdf",w=17,h=10 ,units = "cm", limitsize = FALSE)
+```
+#Means per group per cluster
+```{r}
+cgroups <- merged_mm[rank1=="Metazoa", .(AVG=mean(value)), by=c("cluster","rank4")]
+cgroups$rank4 <- factor(cgroups$rank4, levels = unique(merged_mm$rank4), order=TRUE)
+ggplot(cgroups, aes(x = rank4, y = cluster, fill = AVG))+scale_fill_viridis()+ 
+       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=rel(0.3)))+   geom_tile()
+cgroups_d <- dcast(cgroups, cluster~rank4, value=AVG)
+
+```
+```{r}
+V <- apply(cgroups_d[,2:ncol(cgroups_d)],1,diff) # iterated differences
+Best10 <- cgroups_d[rev(order(colSums(abs(V))))[1:10]] #Metazoan groups with most variation
+ggplot(cgroups[cluster %in% Best10$cluster], aes(x = rank4, y = cluster, fill = AVG))+scale_fill_viridis()+ 
+       theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=rel(0.3)))+   geom_tile()
+```
+Specific clusters (Fig. S9):
+```{r}
+selected=c(1:100) #first 100 cluster
+#selected=c(4,35)
+selected_clusters <- merged_mm[cluster %in% selected] 
+selected_clusters$cluster <-factor(selected_clusters$cluster, levels=rev(selected)) # order top to bottom
+
+ggplot(selected_clusters, aes(x = Genome_id, y = cluster, fill = value))+
+       facet_grid(. ~ rank1 , scales='free_x', space = "free_x", labeller=labeller(rank1=main.labs[["rank1"]]))+
+       theme(axis.ticks.x = element_blank(),
+             axis.text.x = element_blank(),
+             axis.text.y = element_text(size = 5+1/ys),
+             strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+             strip.text = element_text(size = rel(0.6)),
+       panel.spacing = unit(0.0, "pt"),
+       legend.key.size = unit(0.4, 'cm')) +
+       geom_tile()+xlab("Genomes")+ylab("Modules")+
+       scale_fill_viridis()
+
+ggsave("cluster_heatmap_selected.pdf",w=18,h=length(selected)/4.5+3 ,units = "cm", limitsize = FALSE)
+```
+Orthogroups in clusters:
+```{r}
+selected = 139
+SelClu <- merged[cluster == selected]
+
+clu_means <- SelClu[,3:ncol(SelClu)]
+hc_o <- hclust(dist(clu_means)) #Hierarchical clustering of Orthogroups in clusters
+
+SelClu_m <- melt(SelClu,id.vars=c("cluster","V1"),measure.vars = colnames(merged)[3:ncol(merged)],variable.name = "Genome_id")
+SelClu_m <- join(SelClu_m,cl_d,by="Genome_id") # join keep df1 order
+SelClu_m$V1<-factor(x=SelClu_m$V1, levels=unique(SelClu_m$V1[rev(hc_o$order)]))
+
+cols=colnames(SelClu_m)[grepl("rank",colnames(SelClu_m))]
+
+shorten_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=50,x,ifelse(f_names[x]>0,substr(x,1,1)," " ))) 
+  return(unlist(short)) 
+}
+
+
+#SelClu_m <- SelClu_m[rank1=="Fungi"]
+#SelClu_m <- SelClu_m[rank3=="Mammalia"]
+SelClu_m$sel_rank=SelClu_m[,"rank1"]
+
+
+ys = length(unique(SelClu_m$V1))
+xs = length(unique(SelClu_m$Genome_id))
+cols=colnames(SelClu_m)[grepl("rank",colnames(SelClu_m))] #convert rank to factors
+SelClu_m[,(cols) := lapply(.SD, function(x) factor(x,levels=unique(x))), .SDcols = cols]
+short.labs = lapply(SelClu_m[,..cols], shorten_labels)
+
+ggplot(SelClu_m, aes(x = rank6, y = V1, fill = as.character(value))) +
+      facet_grid(. ~ sel_rank , scales='free_x', space = "free_x", labeller=labeller(sel_rank=short.labs[["sel_rank"]]))+
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=4+1/xs),
+            axis.text.y = element_text(size = 5+1/ys),
+            strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+            strip.text = element_text(size = rel(1.1)),
+            panel.spacing = unit(0.0, "pt"),
+            legend.position = "bottom"
+            ) +
+            geom_tile()+
+            scale_fill_viridis_d(name="Orthogroup presence")+
+            ylab("")+xlab("")+
+            ggtitle(paste0("Module #",selected," - ", length(unique(SelClu_m$V1))," Orthogroups" ))
+ggsave("gene_heatmap_cluster.pdf",w=length(unique(SelClu_m$Genome_id))/5,h=10+length(unique(SelClu_m$V1))/6 ,units = "cm", limitsize = FALSE)
+
+
+```
+Orthogroups in clusters (facet_nested example):
+```{r}
+library(ggh4x)
+selected = 19
+SelClu <- merged[cluster == selected]
+
+SelClu_m <- melt(SelClu,id.vars=c("cluster","V1"),measure.vars = colnames(merged)[3:ncol(merged)],variable.name = "Genome_id")
+SelClu_m <- join(SelClu_m,cl_d,by="Genome_id") # join keep df1 order
+
+SelClu_m <- SelClu_m[rank1=="Metazoa" & rank3=="Insecta"]
+cols=colnames(SelClu_m)[grepl("rank",colnames(SelClu_m))]
+
+shorten_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=15,x,ifelse(f_names[x]>=5,substr(x,1,3),ifelse(f_names[x]>0,substr(x,1,1),"." )))) 
+  return(unlist(short))
+}
+
+ys = length(unique(SelClu_m$V1))/100
+cols=colnames(SelClu_m)[grepl("rank",colnames(SelClu_m))] #convert rank to factors
+SelClu_m[,(cols) := lapply(.SD, function(x) factor(x,levels=unique(x))), .SDcols = cols]
+short.labs = lapply(SelClu_m[,..cols], shorten_labels)
+
+ggplot(SelClu_m, aes(x = rank6, y = V1, fill = as.character(value))) +
+      facet_nested(. ~ rank1 + rank3 + rank4, scales='free_x', space = "free_x", labeller=labeller(rank1=short.labs[["rank1"]],rank3=short.labs[["rank3"]], rank4=short.labs[["rank4"]]))+
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=rel(0.4)),
+            axis.text.y = element_text(size = 0.8*(ys+1)/ys),
+            strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+            strip.text = element_text(size = rel(0.7)),
+            panel.spacing = unit(0.0, "pt")
+            ) +
+            geom_tile()+
+            ggtitle(paste0("Cluster #",selected))
+ggsave("gene_heatmap_nested.pdf",w=40,h=10 ,units = "cm", limitsize = FALSE)
+```
+Specific orthogroups (Fig. S12)
+```{r}
+sOrthogroups = c("905115at2759","358540at2759","563639at2759","906540at2759") #Malate synthase
+#sOrthogroups = c("759341at2759","865174at2759")
+#sOrthogroups = c("1231039at2759",   "1538096at2759", "268303at2759", "846266at2759", "213907at2759")
+
+SelClu <-num[V1 %in% sOrthogroups] 
+colnames(SelClu)[2:ncol(num)] <- Genome_ids 
+
+SelClu$V1 <- factor(SelClu$V1, levels=sOrthogroups)
+
+SelClu$Description <- csv[Orthogroup %in% sOrthogroups,"Description"]
+#SelClu$Description <-paste(SelClu$V1,SelClu$Description, sep="\n") # add orthogroup ID to description
+SelClu <- SelClu[rev(order(SelClu$V1))]
+SelClu$Description <- factor(SelClu$Description, levels=unique(SelClu$Description))
+
+SelClu_m <- melt(SelClu,id.vars=c("V1","Description"),measure.vars = Genome_ids,variable.name = "Genome_id")
+SelClu_m <- join(SelClu_m,cl_d,by="Genome_id") # join keep df1 order
+
+#SelClu_m <- SelClu_m[rank1=="Metazoa"]
+
+ys = length(unique(SelClu_m$V1))/100
+cols=colnames(SelClu_m)[grepl("rank",colnames(SelClu_m))] 
+SelClu_m[,(cols) := lapply(.SD, function(x) factor(x,levels=unique(x))), .SDcols = cols] #convert rank to factors
+shorten_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=100,x,ifelse(f_names[x]>=50,substr(x,1,3),ifelse(f_names[x]>=15,substr(x,1,1)," " )))) 
+  return(unlist(short))
+}
+short.labs = lapply(SelClu_m[,..cols], shorten_labels)
+ggplot(SelClu_m, aes(x = rank6, y = Description, fill = as.character(value))) +
+      facet_nested(. ~ rank1 + rank2, scales='free_x', space = "free_x", labeller=labeller(rank1=short.labs[["rank1"]],rank2=short.labs[["rank2"]],rank3=short.labs[["rank3"]]))+
+      theme(axis.text.x = element_blank(),
+            axis.text.y = element_text(size = 8),
+            strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+            strip.text = element_text(size = rel(0.6)),
+            panel.spacing = unit(0, "pt"),
+            legend.position="bottom") +  
+            geom_tile() + scale_fill_viridis_d(name="Orthogroup presence")+
+            labs(x=paste(length(unique(SelClu_m$Genome_id))," Genomes"), y=" ")
+            ggsave("gene_heatmap.pdf",w=20,h=6 ,units = "cm", limitsize = FALSE)
+
+
+```
+zoom on Mammalia
+
+```{r}
+
+SelClu_m_a <- SelClu_m[rank2=="Chordata" & rank3=="Mammalia",]
+
+shorten_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=100,x,ifelse(f_names[x]>=30,substr(x,1,3),ifelse(f_names[x]>2,substr(x,1,1)," " )))) 
+  return(unlist(short))
+}
+short.labs = lapply(SelClu_m_a[,..cols], shorten_labels)
+
+
+ggplot(SelClu_m_a, aes(x = rank6, y = Description, fill = value)) +
+      facet_grid(. ~ rank3, scales='free_x', space = "free_x", labeller=labeller(rank1=short.labs[["rank3"]]))+
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=3),
+            axis.text.y = element_text(size = 8),
+            strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+            strip.text = element_text(size = rel(0.7)),
+            panel.spacing = unit(0, "pt"),
+            legend.position="bottom") +  
+            geom_tile() + scale_fill_viridis(name="Orthogroup presence")+
+            labs(x=" ", y=" ")
+            ggsave("gene_heatmap.pdf",w=20,h=8 ,units = "cm", limitsize = FALSE)
+
+
+```
+
+zoom on Metazoa (excluding chordata), averaging by rank3
+
+```{r}
+#Average by rank3 
+SelClu_m_a <- SelClu_m[rank1=="Metazoa" & rank2!="Chordata", .(AVG=mean(value),rank1=rank1,rank2=rank2), by=c("V1","Description","rank3")]
+
+cols=colnames(SelClu_m_a)[grepl("rank",colnames(SelClu_m_a))] 
+SelClu_m_a[,(cols) := lapply(.SD, function(x) factor(x,levels=unique(x))), .SDcols = cols] #convert rank to factors
+
+shorten_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=100,x,ifelse(f_names[x]>=30,substr(x,1,3),ifelse(f_names[x]>2,substr(x,1,1)," " )))) 
+  return(unlist(short))
+}
+short.labs = lapply(SelClu_m_a[,..cols], shorten_labels)
+
+
+ggplot(SelClu_m_a, aes(x = rank3, y = Description, fill = AVG)) +
+      facet_nested(. ~ rank1 + rank2, scales='free_x', space = "free_x", labeller=labeller(rank1=short.labs[["rank1"]],rank2=short.labs[["rank2"]],rank3=short.labs[["rank3"]]))+
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=8),
+            axis.text.y = element_text(size = 8),
+            strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+            strip.text = element_text(size = rel(0.7)),
+            panel.spacing = unit(0, "pt"),
+            legend.position="bottom") +  
+            geom_tile() + scale_fill_viridis(name="Orthogroup presence")+
+            labs(x=" ", y=" ")
+ggsave("gene_heatmap.pdf",w=20,h=8 ,units = "cm", limitsize = FALSE)
+```
+#zoom on Artrhopoda, averaging by rank4
+
+```{r}
+#Average by rank3 
+SelClu_m_a <- SelClu_m[rank2=="Arthropoda", .(AVG=mean(value),rank1=rank1,rank2=rank2,rank3=rank3), by=c("V1","Description","rank4")]
+
+cols=colnames(SelClu_m_a)[grepl("rank",colnames(SelClu_m_a))] 
+SelClu_m_a[,(cols) := lapply(.SD, function(x) factor(x,levels=unique(x))), .SDcols = cols] #convert rank to factors
+
+shorten_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=100,x,ifelse(f_names[x]>=30,substr(x,1,3),ifelse(f_names[x]>2,substr(x,1,1)," " )))) 
+  return(unlist(short))
+}
+short.labs = lapply(SelClu_m_a[,..cols], shorten_labels)
+
+
+ggplot(SelClu_m_a, aes(x = rank4, y = Description, fill = AVG)) +
+      facet_nested(. ~ rank1 + rank2, scales='free_x', space = "free_x", labeller=labeller(rank1=short.labs[["rank1"]],rank2=short.labs[["rank2"]],rank3=short.labs[["rank3"]]))+
+      theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1, size=8),
+            axis.text.y = element_text(size = 8),
+            strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+            strip.text = element_text(size = rel(0.7)),
+            panel.spacing = unit(0, "pt"),
+            legend.position="bottom") +   
+            geom_tile() + scale_fill_viridis(name="Orthogroup presence")+
+            labs(x=" ", y=" ")
+            ggsave("gene_heatmap.pdf",w=20,h=8 ,units = "cm", limitsize = FALSE)
+
+```
+Anti-correlated scores (Fig. S8A)
+```{r}
+sOrthogroups = c("1269901at2759","1639602at2759") #negative association
+SelClu <-num[V1 %in% sOrthogroups]
+colnames(SelClu)[2:ncol(num)] <- Genome_ids
+
+SelClu$V1 <- factor(SelClu$V1, levels=sOrthogroups)
+
+SelClu$Description <- csv[Orthogroup %in% sOrthogroups,"Description"]
+SelClu$Description <-paste(SelClu$V1,SelClu$Description, sep="\n") # add orthogroup ID to description
+SelClu <- SelClu[rev(order(SelClu$V1))]
+SelClu$Description <- factor(SelClu$Description, levels=unique(SelClu$Description))
+
+SelClu_m <- melt(SelClu,id.vars=c("V1","Description"),variable.name = "Genome_id")
+SelClu_m <- join(SelClu_m,cl_d,by="Genome_id") # join keep df1 order
+
+SelClu_m <- SelClu_m[rank1=="Metazoa"]
+
+ys = length(unique(SelClu_m$V1))/100
+cols=colnames(SelClu_m)[grepl("rank",colnames(SelClu_m))] 
+SelClu_m[,(cols) := lapply(.SD, function(x) factor(x,levels=unique(x))), .SDcols = cols] #convert rank to factors
+shorten_labels <- function(label_vector){
+  short <- lapply(as.character(unique(label_vector)), function(x) ifelse(f_names[x]>=100,x,ifelse(f_names[x]>=30,substr(x,1,3),ifelse(f_names[x]>10,substr(x,1,1)," " )))) 
+  return(unlist(short))
+}
+short.labs = lapply(SelClu_m[,..cols], shorten_labels)
+ggplot(SelClu_m, aes(x = rank6, y = Description, fill = as.character(value))) +
+      facet_nested(. ~ rank1 + rank2, scales='free_x', space = "free_x", labeller=labeller(rank1=short.labs[["rank1"]],rank2=short.labs[["rank2"]],rank2=short.labs[["rank3"]]))+
+      theme(axis.text.x = element_blank(),
+            axis.text.y = element_text(size = 8),
+            strip.background=element_rect(color="grey30", fill="grey90",size=0.1),
+            strip.text = element_text(size = rel(0.7)),
+            panel.spacing = unit(0, "pt"),
+            legend.position="bottom") +  
+            geom_tile() + scale_fill_viridis_d(name="Orthogroup presence")+
+            labs(x=paste(length(unique(SelClu_m$Genome_id))," Genomes"), y=" ")
+            ggsave("gene_heatmap.pdf",w=20,h=5 ,units = "cm", limitsize = FALSE)
+```
+Sequence comparison (Fig. S8B)
+```{r}
+library(Biostrings)
+library(grid)
+library(gridExtra)
+
+Download_Orthogroup_seq <- function(OG_vector,num_seq) {
+  set.seed(42) #sample 5 seq per Orthogroups
+  Odb <- "https://v101.orthodb.org/pgrest/rpc/fasta?id="
+  fasta <- lapply(OG_vector, function (x) sample(readAAStringSet(paste0(Odb,x)),num_seq))
+  names(fasta) <- OG_vector
+  return(fasta)
+}
+   
+Compare_Orthogroup_seq <- function(O1,O2) {
+  id <- lapply(fasta[[O1]], function(x) pid(pairwiseAlignment(fasta[[O2]],x)))
+  return(id)
+}
+
+fasta <- Download_Orthogroup_seq(sOrthogroups,100) #100 seq per outgroup
+O11<-as.matrix(as.data.frame(Compare_Orthogroup_seq(sOrthogroups[1],sOrthogroups[1])))
+O22<-as.matrix(as.data.frame(Compare_Orthogroup_seq(sOrthogroups[2],sOrthogroups[2])))
+O12<-as.matrix(as.data.frame(Compare_Orthogroup_seq(sOrthogroups[1],sOrthogroups[2])))
+
+o11 <- pheatmap::pheatmap(O11, show_colnames = F, show_rownames = F,color = hcl.colors(10, "BluYl"), treeheight_row = 0, treeheight_col = 0, border_color=NA, main=paste0(sOrthogroups[1]," Vs ",sOrthogroups[1]),fontsize = 6)
+o22 <- pheatmap::pheatmap(O22, show_colnames = F, show_rownames = F,color = hcl.colors(10, "BluYl"), treeheight_row = 0, treeheight_col = 0, border_color=NA, main=paste0(sOrthogroups[2]," Vs ",sOrthogroups[2]),fontsize = 6)
+o12 <- pheatmap::pheatmap(O12, show_colnames = F, show_rownames = F,color = hcl.colors(10, "BluYl"), treeheight_row = 0, treeheight_col = 0, border_color=NA, main=paste0(sOrthogroups[1]," Vs ",sOrthogroups[2]),fontsize = 6)
+
+g<-do.call("grid.arrange",c(list(o11[[4]],o22[[4]],o12[[4]]),ncol=3))
+ggsave("Orthogroup_identity_heatmaps.pdf",w=6,h=2,g)
+
+```
+
