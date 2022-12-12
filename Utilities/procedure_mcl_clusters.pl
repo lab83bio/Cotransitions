@@ -49,19 +49,21 @@ close CSV;
 
 open CLU, "<$org.clusters" or die $!;
 open CLU_ANN, ">$org.clusters.annotated" or die $!;
+my $c_count=0;
 foreach (<CLU>){
   chomp;
   my @B=split;
   next if ($#B<1); #skip mono clusters
+  $c_count++;
   my $t_score=0;
   for (my $i=0;defined $B[$i+1];$i++) { 
      for (my $t=$i+1;defined $B[$t];$t++) { 
 		if (defined $Score{$B[$i]}{$B[$t]}){ $t_score+=$Score{$B[$i]}{$B[$t]} } else {$t_score+=0.1} 
 	}
   }
-  printf CLU_ANN "%.5f %s \(%s\): ", $t_score/( (scalar @B * (scalar @B -1))/2 ),$G{$B[0]}, scalar @B if (scalar @B >=2); 
+  printf CLU_ANN "%.5f %s \(%s\): ", $t_score/( (scalar @B * (scalar @B -1))/2 ),$G{$B[0]}, scalar @B; 
   foreach (@B){printf CLU_ANN "%s:%s ### ", $_,$D{$_}  } 
   printf CLU_ANN "\n";
 }
 close CLU; close CLU_ANN;
-printf STDERR "written $org.clusters.annotated\n";
+printf STDERR "written $c_count modules in $org.clusters.annotated\n";
