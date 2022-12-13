@@ -13,7 +13,7 @@ Any version of [Conda](https://docs.conda.io/en/latest/) or [Miniconda](https://
 ```{bash}
 git clone https://github.com/lab83bio/Cotransitions.git
 cd Cotransitions
-source install.sh
+source cotr_install
 ```
 The installation is successful if `(cotr)` in the command line prompt
 
