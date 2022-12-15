@@ -43,6 +43,6 @@ The whole analysis can be performed by clicking ⏩ "Restart kernel and run all 
 
 ## License
 
-Cotr scripts are available under the MIT licence
+
 
 
