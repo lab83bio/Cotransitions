@@ -25,13 +25,13 @@ write(paste0("reading data from: ",oDB),stderr())
 
 #NCBI taxonomy nodes (levels) where orthologous groups (OGs) are calculated
 lev <- fread(paste0(oDB,'_levels.tab.gz'),header = F, 
-            col.names=c('Taxid','Group','num.genes','num.orthogroups','num.orgs'))
+            col.names=c('Taxid','Group','num.genes','num.orthogroups','num.orgs'), tempdir='.')
 #OrthoDB orthologous groups
 OGs <- fread(paste0(oDB,'_OGs.tab.gz'),header = F,
-            col.names=c('Orthogroup','Taxid','Description'))
+            col.names=c('Orthogroup','Taxid','Description'), tempdir='.')
 #OGs to genes correspondence
 Gcs <- fread(paste0(oDB,'_OG2genes.tab.gz'), header=F, showProgress =T,
-            col.names=c('Orthogroup','GeneID'))
+            col.names=c('Orthogroup','GeneID'), tempdir='.')
 
 #Select level
 sOGs <- OGs[Taxid %in% lev[Group %in% args$level,Taxid],Orthogroup]
