@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #cotr pipeline
 
-level="Archaea" #"Bacteria", "Archaea" (faster), "Mammalia", etc
-tree="ncbi" #raxml|ncbi|random
+level="Eukarya" #"Bacteria", "Archaea" (faster), "Mammalia", etc
+tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
-ncores=10
+ncores=10 #for raxml
 
 
 #read Orthodb tables
