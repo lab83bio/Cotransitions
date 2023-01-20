@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #cotr pipeline
 
-level="Eukarya" #"Bacteria", "Archaea" (faster), "Mammalia", etc
+level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
 tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=10 #for raxml
 
 
 #read Orthodb tables
-#Utilities/procedure_Orthodb_read_tables.r -l $level
+Utilities/procedure_Orthodb_read_tables.r -l $level
 
 #taxonomy-constrained tree with RaxML 
 if [ $tree == 'raxml' ] 
