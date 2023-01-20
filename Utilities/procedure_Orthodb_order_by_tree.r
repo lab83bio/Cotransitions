@@ -38,15 +38,18 @@ if (args$tree=='raxml'){
   if (file.exists(RAxMLfile) ){
     tr <- read.tree(RAxMLfile)
   }
-  else {stop(paste("File ",RAxMLfile, "not found"))}
-  
-  #assign names to internal nodes based on phylip tree
-  tr_md5sum <- makeNodeLabel(tr, method = "md5sum")
-  trp_md5sum <- makeNodeLabel(trp, method = "md5sum")
-  tr$node.label <- trp$node.label[match(tr_md5sum$node.label,trp_md5sum$node.label)]
-  rank <- unlist(lapply(c(Ngroups$species,tr$node.label), function(x) cl_d[which(cl_d$name==x),"rank"][1]))
-  
+  else {
+	stop(paste("File ",RAxMLfile, "not found"))
+  }
 }
+
+#assign names to internal nodes based on phylip tree
+tr_md5sum <- makeNodeLabel(tr, method = "md5sum")
+trp_md5sum <- makeNodeLabel(trp, method = "md5sum")
+tr$node.label <- trp$node.label[match(tr_md5sum$node.label,trp_md5sum$node.label)]
+rank <- unlist(lapply(c(Ngroups$species,tr$node.label), function(x) cl_d[which(cl_d$name==x),"rank"][1]))
+  
+
 
 if(args$out_root != "none" && args$out_root %in% tr$node.label){
   tr <- ape::root(tr,node=length(tr$tip.label)+which(tr$node.label==args$out_root)) #euk. root is uncertain see to https://doi.org/10.1016/j.tree.2019.08.008

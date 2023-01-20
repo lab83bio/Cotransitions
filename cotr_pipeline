@@ -1,21 +1,24 @@
 #!/usr/bin/env bash
 #cotr pipeline
 
-level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
-tree="raxml" #raxml|ncbi|random
+level="Archaea" #"Bacteria", "Archaea" (faster), "Mammalia", etc
+tree="ncbi" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=10
 
 
 #read Orthodb tables
-Utilities/procedure_Orthodb_read_tables.r -l $level
+#Utilities/procedure_Orthodb_read_tables.r -l $level
 
-#taxonomy-constrained tree with RaxML [comment if not using a resolved tree]
-raxmlHPC-PTHREADS -g $level.phylip.tree -s $level.phylip.data -n $level -m BINCAT -p 33 -T $ncores
+#taxonomy-constrained tree with RaxML 
+if [ $tree == 'raxml' ] 
+then
+	raxmlHPC-PTHREADS -g $level.phylip.tree -s $level.phylip.data -n $level -m BINCAT -p 33 -T $ncores
+fi
 
 #order tables by trees
 for d in ${ladder[@]}; do 
-    Utilities/procedure_Orthodb_order_by_tree.r $level.RData -t raxml -d $d -o Viridiplantae &
+    Utilities/procedure_Orthodb_order_by_tree.r $level.RData -t $tree -d $d -o Viridiplantae &
 done
 wait
 
