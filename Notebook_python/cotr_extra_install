@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+conda create  --name cotr_extra --file cotr_extra_env.txt
+conda activate cotr_extra
+Rscript -e 'install.packages("TSDT",repos="http://cran.us.r-project.org")'
+Rscript -e 'install.packages("ggvenn",repos="http://cran.us.r-project.org")'
+pip3 install git+https://github.com/mojaie/pygosemsim.git
