@@ -29,24 +29,23 @@ from sklearn.metrics import roc_curve, auc
 
 def transitionstoogs(transitions_file):
     
-    transitions = pd.read_table(transitions_file, header=None).iloc[1:,:]
-    transitions.columns = ['og1','og2','q','w','r','t','y','score','pval','adjpval','ognames']
+    transitions = pd.read_table(transitions_file)
     transitions['og1name'] = transitions['ognames'].apply(lambda x: x.split(' --- ')[0])
     transitions['og2name'] = transitions['ognames'].apply(lambda x: x.split(' --- ')[1])
     transitions = transitions.drop('ognames', axis=1)
 
-    ogs = pd.concat([transitions[['og1','score','pval','adjpval','og1name']
-                          ].rename(columns={'og1':'og','og1name':'ogname'}),
-               transitions[['og2','score','pval','adjpval','og2name']
-                          ].rename(columns={'og2':'og','og2name':'ogname'})]
+    ogs = pd.concat([transitions[['Orthogroup1','k_score','p','p.adj','og1name']
+                          ].rename(columns={'Orthogroup1':'og','og1name':'ogname'}),
+               transitions[['Orthogroup2','k_score','p','p.adj','og2name']
+                          ].rename(columns={'Orthogroup2':'og','og2name':'ogname'})]
              )
 
-    ogs['pval'] = ogs['pval'].astype(float)
-    ogs['score'] = ogs['score'].astype(float)
-    ogs['adjpval'] = ogs['adjpval'].astype(float)
-    ogs = ogs.sort_values('adjpval').drop_duplicates('og')
+    ogs['p'] = ogs['p'].astype(float)
+    ogs['k_score'] = ogs['k_score'].astype(float)
+    ogs['p.adj'] = ogs['p.adj'].astype(float)
+    ogs = ogs.sort_values('p.adj').drop_duplicates('og')
     
-    ogs = ogs[ogs['score']>0]
+    ogs = ogs[ogs['k_score']>0]
     
     return ogs
 
@@ -107,3 +106,15 @@ def scalepval(df, col, minrange, maxrange):
     final2 = pd.concat([finalpos, finalneg])
     
     return final2
+
+def clustersfromann(clusters_file, level):
+    
+    clusters = pd.DataFrame(itertools.chain.from_iterable(map(lambda y: list(map(lambda x: [y[0]]+ x.split(f'{level}:')+[y[1].split(':')[0]],':'.join(y[1].split(':')[1:]).strip().strip(' ###').split(' ### '))),
+                                                              enumerate(open(clusters_file).readlines())))).dropna(subset=[3])
+    clusters.columns = ['cluster','og', 'name', 'feat']
+    clusters[['score', 'transition', 'n']] = clusters['feat'].str.split(' ', expand=True)
+    clusters['n'] = clusters['n'].apply(lambda x: x.strip('(').strip(')'))
+    clusters['og'] = clusters['og']+level
+    # clusters[['cluster', 'score', 'transition', 'n', 'og', 'name']].to_csv('Eukaryota_cluster.tsv', sep='\t', index=False)
+    clusters = clusters[['cluster', 'score', 'transition', 'n', 'og', 'name']]
+    return clusters
