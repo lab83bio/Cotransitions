@@ -2,15 +2,20 @@
 #cotr pipeline
 
 rebuild_tables=false # for reproducibility
+Outdir="Data"
 level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
 tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=10 #for raxml
 
+cwd=`realpath .`
+mkdir -p $Outdir/$level
+cd $Outdir/$level
+
 if $rebuild_tables
 then
 	#read Orthodb tables
-	Utilities/procedure_Orthodb_read_tables.r -l $level
+	${cwd}/Utilities/procedure_Orthodb_read_tables.r -l $level
 
 	#taxonomy-constrained tree with RaxML 
 	if [ $tree == 'raxml' ] 
@@ -20,14 +25,14 @@ then
 fi
 #order tables by trees
 for d in ${ladder[@]}; do 
-    Utilities/procedure_Orthodb_order_by_tree.r $level.RData -t $tree -d $d -o Viridiplantae &
+    ${cwd}/Utilities/procedure_Orthodb_order_by_tree.r $level.RData -t $tree -d $d -o Viridiplantae &
 done
 wait
 
 
 #cotr analysis
 for d in ${ladder[@]}; do 
-    ./cotr_transitions.py $level.$tree.$d.csv.num | ./cotr_Fisher.r -p 1e-3 -pa 1 - > $level.$tree.$d.transitions.annotated &
+    ${cwd}/cotr_transitions.py $level.$tree.$d.csv.num | ${cwd}/cotr_Fisher.r -p 1e-3 -pa 1 - > $level.$tree.$d.transitions.annotated &
 done
 wait
 
@@ -36,4 +41,4 @@ cat $level.$tree.*.transitions.annotated | perl -anE 'print if ($F[7]>0 and $F[1
 grep -w -f $level.common.txt $level.$tree.${ladder[0]}.transitions.annotated > intersection.$level.$tree.${ladder[0]}.transitions.annotated
 
 #cluster with mcl
-Utilities/procedure_mcl_clusters.pl $level.$tree.${ladder[0]}.csv intersection.$level.$tree.${ladder[0]}.transitions.annotated
+${cwd}/Utilities/procedure_mcl_clusters.pl $level.$tree.${ladder[0]}.csv intersection.$level.$tree.${ladder[0]}.transitions.annotated
