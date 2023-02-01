@@ -3,8 +3,20 @@
 # Order species according to a phylogenetic tree
 #
 library(data.table)
+library(tibble)
+library(taxize)
+library(ape)
+library(phangorn)
+library(argparse)
+suppressPackageStartupMessages(library(treeio))
 
-
+# create parser object
+ap <- ArgumentParser()
+ap$add_argument("-t", "--tree", type="character", default="raxml", choices=c('ncbi','raxml', 'random'),
+                    help="order taxa by ncbi tree (partially resolved), ncbi-constrained raxml tree (fully resolved), or randomly  [default %(default)s]")
+ap$add_argument("-o", "--out_root (none=no rooting)", type="character", default="Viridiplantae",
+                    help="Group for tree rooting, [default %(default)s]")
+ap$add_argument("-d", "--ladderize", type="character", default="RL", choices=c('LL','RL', 'NL'),
                     help="ladderize the tree for taxa order, [default %(default)s]")
 ap$add_argument("RData", nargs=1,help=".Rdata file from procedure_Orthodb_read_tables.r")
 args <- ap$parse_args()
