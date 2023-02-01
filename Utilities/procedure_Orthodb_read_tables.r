@@ -16,22 +16,24 @@ ap$add_argument("-s", "--species taxid", type="character",
                     help="only outgrups present in the species taxid, [default %(default)s]")
 ap$add_argument("-m", "--min_percentage", type="double", default=1,
                     help="include orthogroups present in  at least x percent of taxa, [default %(default)s]")
+ap$add_argument("-o", "--odb", type="character", default="https://v101.orthodb.org/download/odb10v1",
+                    help="path or url for odb files")
 args <- ap$parse_args()
 
 print(args,stderr())
 
-oDB <- "https://v101.orthodb.org/download/odb10v1"
+oDB <- args$odb
 write(paste0("reading data from: ",oDB),stderr())
 
 #NCBI taxonomy nodes (levels) where orthologous groups (OGs) are calculated
-lev <- fread(paste0(oDB,'_levels.tab.gz'),header = F, 
-            col.names=c('Taxid','Group','num.genes','num.orthogroups','num.orgs'), tmpdir='.')
+lev <- fread(paste0(oDB,'_levels.tab.gz'),header = F, tmpdir='.', sep = '\t',
+            col.names=c('Taxid','Group','num.genes','num.orthogroups','num.orgs'))
 #OrthoDB orthologous groups
-OGs <- fread(paste0(oDB,'_OGs.tab.gz'),header = F,
-            col.names=c('Orthogroup','Taxid','Description'), tmpdir='.')
+OGs <- fread(paste0(oDB,'_OGs.tab.gz'),header = F, tmpdir='.', sep = '\t',
+            col.names=c('Orthogroup','Taxid','Description'))
 #OGs to genes correspondence
-Gcs <- fread(paste0(oDB,'_OG2genes.tab.gz'), header=F, showProgress =T,
-            col.names=c('Orthogroup','GeneID'), tmpdir='.')
+Gcs <- fread(paste0(oDB,'_OG2genes.tab.gz'), header=F, tmpdir='.', sep = '\t',
+            col.names=c('Orthogroup','GeneID'))
 
 #Select level
 sOGs <- OGs[Taxid %in% lev[Group %in% args$level,Taxid],Orthogroup]
@@ -133,8 +135,3 @@ save(Gst,
 write(paste0("Data written in: ",outfile),stderr())
 
 #all done
-
-
-
-
-

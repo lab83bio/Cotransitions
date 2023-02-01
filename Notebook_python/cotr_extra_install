@@ -5,3 +5,4 @@ conda activate cotr_extra
 Rscript -e 'install.packages("TSDT",repos="http://cran.us.r-project.org")'
 Rscript -e 'install.packages("ggvenn",repos="http://cran.us.r-project.org")'
 pip3 install git+https://github.com/mojaie/pygosemsim.git
+pip3 install omadb pyham
