@@ -22,32 +22,24 @@ The installation is successful if `(cotr)` in the command line prompt
 ```
 
 ## Usage
-To run the whole pipeline, please modify with your parameters in the `cotr_pipeline` VARAIBLES section. <br>
-For example:
+To run the whole pipeline with **OrthoDB**:
+
+```bash
+./cotr_pipeline
+```
+
+[you can modify with your parameters the `cotr_pipeline` VARIABLES section] <br>
 ```bash
 level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
 tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=25
 ```
-then you can run
-```bash
-./cotr_pipeline
-```
 ### Usage with OMA HOGs
 To run the whole pipeline with OMA HOGs, please install cotr_extra envinroment with:
 
 ```{bash}
 source cotr_extra_install
-```
-Modify with your parameters in the `cotr_pipeline_OMA.sh` VARAIBLES section. <br>
-For example:
-```bash
-level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
-taxonomy_database='ncbi' #ncbi|oma
-tree="raxml" #raxml|ncbi|random
-ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
-ncores=30
 ```
 
 then you can run
