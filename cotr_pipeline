@@ -42,3 +42,8 @@ grep -w -f $level.common.txt $level.$tree.${ladder[0]}.transitions.annotated > i
 
 #cluster with mcl
 ${cwd}/Utilities/procedure_mcl_clusters.pl $level.$tree.${ladder[0]}.csv intersection.$level.$tree.${ladder[0]}.transitions.annotated
+
+#all done
+echo "results written in ${cwd}/$Outdir/$level"
+
+
