@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #cotr pipeline
 
-rebuild_tables=0 # for reproducibility
+rebuild_tables=false # for reproducibility
 level="Eukaryota" #"Bacteria", "Archaea" (faster), "Mammalia", etc
 tree="raxml" #raxml|ncbi|random
 ladder=("RL" "LL" "NL") #tree orientation (RL=right-ladderized)
 ncores=10 #for raxml
 
-if [ $rebuild_tables!=0 ]
+if $rebuild_tables
 then
 	#read Orthodb tables
 	Utilities/procedure_Orthodb_read_tables.r -l $level
