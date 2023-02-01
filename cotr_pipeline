@@ -32,7 +32,7 @@ done
 wait
 
 #results intersections
-cat $level.$tree.*.transitions.annotated | perl -anE 'print if ($F[7]>0 and $F[10]<1e-3 or $F[0]=~"Orthogroup")' | cut -f1,2 | sort | uniq -dc| grep -w ${#ladder[@]} | cut -b9- > common.txt 
+cat $level.$tree.*.transitions.annotated | perl -anE 'print if ($F[7]>0 and $F[10]<1e-3)' | cut -f1,2 | sort | uniq -dc| grep -w ${#ladder[@]} | cut -b9- > $level.common.txt 
 grep -w -f $level.common.txt $level.$tree.${ladder[0]}.transitions.annotated > intersection.$level.$tree.${ladder[0]}.transitions.annotated
 
 #cluster with mcl
