@@ -1,6 +1,6 @@
 # Cotransitions
 Statistical analysis of co-evolutionary transitions among genes.<br><br>
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7095966.svg)](https://doi.org/10.5281/zenodo.7095966) 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7578797.svg)](https://doi.org/10.5281/zenodo.7578797) 
 <br><br>
 
 
@@ -34,6 +34,7 @@ then you can run
 ```bash
 ./cotr_pipeline
 ```
+### Usage with OMA HOGs
 To run the whole pipeline with OMA HOGs, please install cotr_extra envinroment with:
 
 ```{bash}
