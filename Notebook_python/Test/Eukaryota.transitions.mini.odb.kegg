@@ -1,0 +1,153 @@
+og	score	pval	adjpval	ogname	description	id	db	cluster	log10pval	log10adjpval	log10pvalscaled
+105366at2759	0.42	1.4758e-27	2.5869e-20	Phosphoribosylglycinamide synthetase, C-domain	Purine metabolism	ko00230	KEGGpathway	59.0	19.19119481846376	19.587220359179703	8.095510532959086
+566769at2759	0.42	1.4758e-27	2.5869e-20	SAICAR synthetase/ADE2, N-terminal	Purine metabolism	ko00230	KEGGpathway	59.0	19.19119481846376	19.587220359179703	8.095510532959086
+105366at2759	0.42	1.4758e-27	2.5869e-20	Phosphoribosylglycinamide synthetase, C-domain	One carbon pool by folate	ko00670	KEGGpathway	59.0	19.19119481846376	19.587220359179703	8.095510532959086
+1114675at2759	0.359375	1.9145e-25	3.3557e-18	Uroporphyrinogen decarboxylase	Porphyrin and chlorophyll metabolism	ko00860	KEGGpathway	62.0	19.19119481846376	17.474216872088956	8.095510532959086
+1189095at2759	0.359375	1.9145e-25	3.3557e-18	Porphobilinogen deaminase, C-terminal	Porphyrin and chlorophyll metabolism	ko00860	KEGGpathway	62.0	19.19119481846376	17.474216872088956	8.095510532959086
+38224at2759	0.377358	6.305100000000001e-25	1.1052e-17	PurM-like, C-terminal domain	Purine metabolism	ko00230	KEGGpathway	59.0	19.19119481846376	16.956559123755525	8.095510532959086
+324473at2759	0.358491	3.2625e-23	5.7185e-16	Methylglyoxal synthase-like domain	One carbon pool by folate	ko00670	KEGGpathway	59.0	19.19119481846376	15.242717874555595	8.095510532959086
+324473at2759	0.358491	3.2625e-23	5.7185e-16	Methylglyoxal synthase-like domain	Purine metabolism	ko00230	KEGGpathway	59.0	19.19119481846376	15.242717874555595	8.095510532959086
+904932at2759	0.432432	3.4531e-23	6.0527e-16	Adenylosuccinate lyase	Alanine, aspartate and glutamate metabolism	ko00250	KEGGpathway	2.0	19.19119481846376	15.218050851211084	8.095510532959086
+904932at2759	0.432432	3.4531e-23	6.0527e-16	Adenylosuccinate lyase	Purine metabolism	ko00230	KEGGpathway	2.0	19.19119481846376	15.218050851211084	8.095510532959086
+1276527at2759	0.432432	3.4531e-23	6.0527e-16	Adenylosuccinate synthetase	Alanine, aspartate and glutamate metabolism	ko00250	KEGGpathway	2.0	19.19119481846376	15.218050851211084	8.095510532959086
+1276527at2759	0.432432	3.4531e-23	6.0527e-16	Adenylosuccinate synthetase	Purine metabolism	ko00230	KEGGpathway	2.0	19.19119481846376	15.218050851211084	8.095510532959086
+924221at2759	0.269231	2.044e-21	3.5827e-14	Pectate lyase	Pentose and glucuronate interconversions	ko00040	KEGGpathway	35.0	19.19119481846376	13.445789556276901	8.095510532959086
+400911at2759	0.283333	1.7958e-18	3.1474e-11	Amidophosphoribosyltransferase	Purine metabolism	ko00230	KEGGpathway	59.0	17.745742032776164	10.50204805951656	6.997630407391237
+400911at2759	0.283333	1.7958e-18	3.1474e-11	Amidophosphoribosyltransferase	Alanine, aspartate and glutamate metabolism	ko00250	KEGGpathway	59.0	17.745742032776164	10.50204805951656	6.997630407391237
+1423947at2759	0.529412	1.2372e-17	2.1685e-10	Tetrapyrrole biosynthesis, uroporphyrinogen III synthase	Porphyrin and chlorophyll metabolism	ko00860	KEGGpathway	238.0	16.90756008866886	9.66384057351522	6.360997161977078
+1055775at2759	0.529412	1.2372e-17	2.1685e-10	Chlorophyll A-B binding protein	Photosynthesis - antenna proteins	ko00196	KEGGpathway	238.0	16.90756008866886	9.66384057351522	6.360997161977078
+1060606at2759	0.264706	2.4314e-17	4.2614e-10	Cytochrome b5-like heme/steroid binding domain	alpha-Linolenic acid metabolism	ko00592	KEGGpathway		16.614143587638587	9.370447698458683	6.138135406695631
+1255438at2759	0.264706	2.4314e-17	4.2614e-10	Sphingolipid delta4-desaturase	Sphingolipid metabolism	ko00600	KEGGpathway		16.614143587638587	9.370447698458683	6.138135406695631
+1225872at2759	0.244186	3.1777e-17	5.5695e-10	Glutathione S-transferase, N-terminal	Drug metabolism - cytochrome P450	ko00982	KEGGpathway	21.0	16.497887106025587	9.25418379171816	6.049833884919781
+1225872at2759	0.244186	3.1777e-17	5.5695e-10	Glutathione S-transferase, N-terminal	Metabolism of xenobiotics by cytochrome P450	ko00980	KEGGpathway	21.0	16.497887106025587	9.25418379171816	6.049833884919781
+1225872at2759	0.244186	3.1777e-17	5.5695e-10	Glutathione S-transferase, N-terminal	Glutathione metabolism	ko00480	KEGGpathway	21.0	16.497887106025587	9.25418379171816	6.049833884919781
+338303at2759	0.246753	1.0041e-16	1.7598e-09	Methylenetetrahydrofolate reductase	One carbon pool by folate	ko00670	KEGGpathway	19.0	15.99822303292256	8.754536686635804	5.670318717941054
+1220426at2759	0.473684	1.1239e-16	1.9697e-09	Armadillo-like helical	Oxidative phosphorylation	ko00190	KEGGpathway	95.0	15.949272328784946	8.70559991509019	5.633138669075139
+1110094at2759	0.571429	1.4013e-16	2.456e-09	Glycosyl transferase, family 14	Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate	ko00532	KEGGpathway	80.0	15.853468877992555	8.60977163753087	5.560372055300376
+1110094at2759	0.571429	1.4013e-16	2.456e-09	Glycosyl transferase, family 14	Glycosaminoglycan biosynthesis - heparan sulfate / heparin	ko00534	KEGGpathway	80.0	15.853468877992555	8.60977163753087	5.560372055300376
+1328684at2759	0.4	2.5692e-16	4.5027e-09	ATPase, OSCP/delta subunit	Photosynthesis	ko00195	KEGGpathway	244.0	15.590202086657937	8.346526987677265	5.360410229642542
+1328684at2759	0.4	2.5692e-16	4.5027e-09	ATPase, OSCP/delta subunit	Oxidative phosphorylation	ko00190	KEGGpathway	244.0	15.590202086657937	8.346526987677265	5.360410229642542
+1333675at2759	0.7	2.859e-16	5.0106e-09	Cytochrome b-c1 complex subunit 7	Oxidative phosphorylation	ko00190	KEGGpathway	250.0	15.543785844642011	8.300110265931758	5.325155207743925
+1579644at2759	0.7	2.859e-16	5.0106e-09	Photosystem II PsbU, oxygen evolving complex	Photosynthesis	ko00195	KEGGpathway	135.0	15.543785844642011	8.300110265931758	5.325155207743925
+392369at2759	0.269231	6.2413e-16	1.0938e-08	GMP synthase, C-terminal	Purine metabolism	ko00230	KEGGpathway	2.0	15.204724941723997	7.96106208096138	5.067624674504335
+392369at2759	0.269231	6.2413e-16	1.0938e-08	GMP synthase, C-terminal	Drug metabolism - other enzymes	ko00983	KEGGpathway	2.0	15.204724941723997	7.96106208096138	5.067624674504335
+1434584at2759	0.583333	2.6171e-15	4.5863e-08	PsbQ-like domain superfamily	Photosynthesis	ko00195	KEGGpathway	271.0	14.582179682549857	7.33853754051684	4.59477625352416
+1315333at2759	0.344828	5.7736e-15	1.0117e-07	KDPG/KHG aldolase	Pentose phosphate pathway	ko00030	KEGGpathway	248.0	14.238553307710283	6.994948250006004	4.333778058845782
+1315333at2759	0.344828	5.7736e-15	1.0117e-07	KDPG/KHG aldolase	Glyoxylate and dicarboxylate metabolism	ko00630	KEGGpathway	248.0	14.238553307710283	6.994948250006004	4.333778058845782
+1059849at2759	0.238095	1.508e-14	2.6424e-07	Spermidine synthase, tetramerisation domain	Cysteine and methionine metabolism	ko00270	KEGGpathway	98.0	13.821598658466245	6.578001439316642	4.017084060120403
+1059849at2759	0.238095	1.508e-14	2.6424e-07	Spermidine synthase, tetramerisation domain	beta-Alanine metabolism	ko00410	KEGGpathway	98.0	13.821598658466245	6.578001439316642	4.017084060120403
+1059849at2759	0.238095	1.508e-14	2.6424e-07	Spermidine synthase, tetramerisation domain	Glutathione metabolism	ko00480	KEGGpathway	98.0	13.821598658466245	6.578001439316642	4.017084060120403
+1059849at2759	0.238095	1.508e-14	2.6424e-07	Spermidine synthase, tetramerisation domain	Arginine and proline metabolism	ko00330	KEGGpathway	98.0	13.821598658466245	6.578001439316642	4.017084060120403
+932490at2759	0.238095	1.508e-14	2.6424e-07	S-adenosylmethionine decarboxylase	Arginine and proline metabolism	ko00330	KEGGpathway	98.0	13.821598658466245	6.578001439316642	4.017084060120403
+932490at2759	0.238095	1.508e-14	2.6424e-07	S-adenosylmethionine decarboxylase	Cysteine and methionine metabolism	ko00270	KEGGpathway	98.0	13.821598658466245	6.578001439316642	4.017084060120403
+1263815at2759	1.0	3.7487e-14	6.5684e-07	Imidazoleglycerol-phosphate dehydratase	Histidine metabolism	ko00340	KEGGpathway	121.0	13.42611931379498	6.182540407578148	3.7167014278501713
+963177at2759	0.2125	4.4858e-14	7.8597e-07	Formyl transferase, N-terminal	One carbon pool by folate	ko00670	KEGGpathway	22.0	13.348160093399654	6.104594030402202	3.657488232148261
+963177at2759	0.2125	4.4858e-14	7.8597e-07	Formyl transferase, N-terminal	Aminoacyl-tRNA biosynthesis	ko00970	KEGGpathway	22.0	13.348160093399654	6.104594030402202	3.657488232148261
+1542938at2759	0.206897	8.8703e-14	1.5541e-06	Ubiquinone biosynthesis O-methyltransferase	Ubiquinone and other terpenoid-quinone biosynthesis	ko00130	KEGGpathway	43.0	13.052061691764516	5.808521039556401	3.432589464380495
+1343847at2759	0.206897	8.8703e-14	1.5541e-06	UbiA prenyltransferase conserved site	Ubiquinone and other terpenoid-quinone biosynthesis	ko00130	KEGGpathway	43.0	13.052061691764516	5.808521039556401	3.432589464380495
+1578484at2759	0.209877	1.2049e-13	2.1109e-06	Protoporphyrinogen oxidase	Porphyrin and chlorophyll metabolism	ko00860	KEGGpathway	62.0	12.919048995620518	5.675532340106304	3.331560916792741
+156081at2759	0.321429	1.9082e-13	3.3429e-06	Acetyl-CoA carboxylase	Aflatoxin biosynthesis	ko00254	KEGGpathway	66.0	12.719376108487088	5.475876614761832	3.179901245464034
+156081at2759	0.321429	1.9082e-13	3.3429e-06	Acetyl-CoA carboxylase	Pyruvate metabolism	ko00620	KEGGpathway	66.0	12.719376108487088	5.475876614761832	3.179901245464034
+156081at2759	0.321429	1.9082e-13	3.3429e-06	Acetyl-CoA carboxylase	Propanoate metabolism	ko00640	KEGGpathway	66.0	12.719376108487088	5.475876614761832	3.179901245464034
+1094172at2759	0.321429	1.9082e-13	3.3429e-06	ELO family	Fatty acid elongation	ko00062	KEGGpathway	66.0	12.719376108487088	5.475876614761832	3.179901245464034
+156081at2759	0.321429	1.9082e-13	3.3429e-06	Acetyl-CoA carboxylase	Fatty acid biosynthesis	ko00061	KEGGpathway	66.0	12.719376108487088	5.475876614761832	3.179901245464034
+160458at2759	0.4375	2.0215e-13	3.5414e-06	Phospholipase D	Glycerophospholipid metabolism	ko00564	KEGGpathway	275.0	12.694326254330306	5.450825017048241	3.160874863350819
+160458at2759	0.4375	2.0215e-13	3.5414e-06	Phospholipase D	Ether lipid metabolism	ko00565	KEGGpathway	275.0	12.694326254330306	5.450825017048241	3.160874863350819
+929897at2759	0.222222	3.7013e-13	6.4835e-06	Uridine kinase	Pyrimidine metabolism	ko00240	KEGGpathway	205.0	12.43164571277997	5.1881904848188665	2.961358318225945
+929897at2759	0.222222	3.7013e-13	6.4835e-06	Uridine kinase	Drug metabolism - other enzymes	ko00983	KEGGpathway	205.0	12.43164571277997	5.1881904848188665	2.961358318225945
+982374at2759	0.255814	4.4574e-13	7.8077e-06	HAD superfamily	Vitamin B6 metabolism	ko00750	KEGGpathway	2.0	12.35091839126766	5.107476882181479	2.900042637246071
+982374at2759	0.255814	4.4574e-13	7.8077e-06	HAD superfamily	Insect hormone biosynthesis	ko00981	KEGGpathway	2.0	12.35091839126766	5.107476882181479	2.900042637246071
+982374at2759	0.255814	4.4574e-13	7.8077e-06	HAD superfamily	Oxidative phosphorylation	ko00190	KEGGpathway	2.0	12.35091839126766	5.107476882181479	2.900042637246071
+982374at2759	0.255814	4.4574e-13	7.8077e-06	HAD superfamily	Photorespiration	M00532	KEGGpathway	2.0	12.35091839126766	5.107476882181479	2.900042637246071
+982374at2759	0.255814	4.4574e-13	7.8077e-06	HAD superfamily	Glyoxylate and dicarboxylate metabolism	ko00630	KEGGpathway	2.0	12.35091839126766	5.107476882181479	2.900042637246071
+834258at2759	0.211268	5.3315e-13	9.3388e-06	Phosphoadenosine phosphosulphate reductase	Sulfur metabolism	ko00920	KEGGpathway		12.273150586456774	5.029708925360908	2.8409748294585637
+500676at2759	0.211268	5.3315e-13	9.3388e-06	Dihydroxy-acid/6-phosphogluconate dehydratase	Valine, leucine and isoleucine biosynthesis	ko00290	KEGGpathway		12.273150586456774	5.029708925360908	2.8409748294585637
+500676at2759	0.211268	5.3315e-13	9.3388e-06	Dihydroxy-acid/6-phosphogluconate dehydratase	Pantothenate and CoA biosynthesis	ko00770	KEGGpathway		12.273150586456774	5.029708925360908	2.8409748294585637
+918089at2759	0.195402	5.8049e-13	1.0168e-05	Delta-aminolevulinic acid dehydratase	Porphyrin and chlorophyll metabolism	ko00860	KEGGpathway	62.0	12.236205257376271	4.992764462454049	2.812913350777506
+516638at2759	0.181818	6.4245e-13	1.1253e-05	Pyridoxal phosphate-dependent transferase	Histidine metabolism	ko00340	KEGGpathway	192.0	12.19216066654775	4.9487316811296145	2.779459694325906
+1388419at2759	0.181818	6.4245e-13	1.1253e-05	FAD/NAD(P)-binding domain	Oxidative phosphorylation	ko00190	KEGGpathway	192.0	12.19216066654775	4.9487316811296145	2.779459694325906
+618077at2759	0.238095	6.5586e-13	1.1488e-05	Inosine-5'-monophosphate dehydrogenase	Drug metabolism - other enzymes	ko00983	KEGGpathway	2.0	12.18318885531386	4.939755573101775	2.772645239131267
+618077at2759	0.238095	6.5586e-13	1.1488e-05	Inosine-5'-monophosphate dehydrogenase	Purine metabolism	ko00230	KEGGpathway	2.0	12.18318885531386	4.939755573101775	2.772645239131267
+1080991at2759	0.193182	9.2678e-13	1.6232e-05	Coproporphyrinogen III oxidase, aerobic	Porphyrin and chlorophyll metabolism	ko00860	KEGGpathway		12.033023346896908	4.78962796597471	2.6585884336311563
+1249774at2759	0.179775	1.2457e-12	2.1817e-05	Fatty acid hydroxylase	Steroid biosynthesis	ko00100	KEGGpathway	202.0	11.904586535551553	4.661204968368194	2.561035456485455
+785883at2759	0.181818	1.7561e-12	3.0751e-05	Methyltransferase domain	Ubiquinone and other terpenoid-quinone biosynthesis	ko00130	KEGGpathway	21.0	11.755450757102105	4.512140756720423	2.447760772737932
+785883at2759	0.181818	1.7561e-12	3.0751e-05	Methyltransferase domain	Insect hormone biosynthesis	ko00981	KEGGpathway	21.0	11.755450757102105	4.512140756720423	2.447760772737932
+1476363at2759	0.625	4.7172e-12	8.2586e-05	Biotin/lipoyl attachment	Citrate cycle (TCA cycle)	ko00020	KEGGpathway	201.0	11.326315710132286	4.083093568152615	2.1218152669989325
+1476363at2759	0.625	4.7172e-12	8.2586e-05	Biotin/lipoyl attachment	Lysine degradation	ko00310	KEGGpathway	201.0	11.326315710132286	4.083093568152615	2.1218152669989325
+1114069at2759	0.171429	6.8244e-12	0.00011946	Prenylcysteine lyase	Terpenoid backbone biosynthesis	ko00900	KEGGpathway		11.165935525700208	3.9227774895889467	2.0
+854035at2759	0.189873	9.4312e-12	0.00016507	2-oxoacid dehydrogenase acyltransferase, catalytic domain	Propanoate metabolism	ko00640	KEGGpathway		11.02543304530914	3.782331848713721	-2.0
+854035at2759	0.189873	9.4312e-12	0.00016507	2-oxoacid dehydrogenase acyltransferase, catalytic domain	Valine, leucine and isoleucine degradation	ko00280	KEGGpathway		11.02543304530914	3.782331848713721	-2.0
+126889at2759	1.0	9.4468e-12	0.00016535	Indole-3-glycerol phosphate synthase	Phenylalanine, tyrosine and tryptophan biosynthesis	ko00400	KEGGpathway	295.0	11.024715279077563	3.7815958007502783	-2.0005451726187475
+1545413at2759	0.257143	9.9266e-12	0.00017368	NADH dehydrogenase 1, beta subcomplex, subunit 6	Oxidative phosphorylation	ko00190	KEGGpathway		11.003199477998873	3.7602501895536364	-2.0168872978156838
+712400at2759	0.257143	9.9266e-12	0.00017368	Sulfotransferase	Glycosaminoglycan biosynthesis - heparan sulfate / heparin	ko00534	KEGGpathway		11.003199477998873	3.7602501895536364	-2.0168872978156838
+356648at2759	0.257143	9.9266e-12	0.00017368	Sulfotransferase	Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate	ko00532	KEGGpathway		11.003199477998873	3.7602501895536364	-2.0168872978156838
+1543738at2759	0.215686	1.4568e-11	0.00025486	Molybdopterin synthase catalytic subunit	Folate biosynthesis	ko00790	KEGGpathway	281.0	10.836600067213137	3.5936983212292253	-2.143426319943594
+1358801at2759	0.275862	1.794e-11	0.0003138	Aconitase A/isopropylmalate dehydratase small subunit, swivel domain	Valine, leucine and isoleucine biosynthesis	ko00290	KEGGpathway	26.0	10.746177561291926	3.503347060749082	-2.212105887438228
+1358801at2759	0.275862	1.794e-11	0.0003138	Aconitase A/isopropylmalate dehydratase small subunit, swivel domain	C5-Branched dibasic acid metabolism	ko00660	KEGGpathway	26.0	10.746177561291926	3.503347060749082	-2.212105887438228
+1358801at2759	0.275862	1.794e-11	0.0003138	Aconitase A/isopropylmalate dehydratase small subunit, swivel domain	Glucosinolate biosynthesis	ath00966	KEGGpathway	26.0	10.746177561291926	3.503347060749082	-2.212105887438228
+374194at2759	0.243243	2.3692e-11	0.00041438	Glycoside hydrolase, family 44	Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	ko00563	KEGGpathway	171.0	10.625398276031094	3.382601213927028	-2.30384266236518
+372861at2759	0.304348	2.411e-11	0.00042169	Pyridoxal phosphate-dependent transferase	Phenylalanine, tyrosine and tryptophan biosynthesis	ko00400	KEGGpathway	169.0	10.617802789622546	3.3750066977670032	-2.3096117429290937
+372861at2759	0.304348	2.411e-11	0.00042169	Pyridoxal phosphate-dependent transferase	Tyrosine metabolism	ko00350	KEGGpathway	169.0	10.617802789622546	3.3750066977670032	-2.3096117429290937
+372861at2759	0.304348	2.411e-11	0.00042169	Pyridoxal phosphate-dependent transferase	Phenylalanine metabolism	ko00360	KEGGpathway	169.0	10.617802789622546	3.3750066977670032	-2.3096117429290937
+1101882at2759	0.222222	2.847e-11	0.00049789	Glycoside hydrolase family 38, central domain	N-Glycan biosynthesis	ko00510	KEGGpathway	126.0	10.545612532853045	3.302866596336375	-2.3644431763398863
+1101882at2759	0.222222	2.847e-11	0.00049789	Glycoside hydrolase family 38, central domain	Other glycan degradation	ko00511	KEGGpathway	126.0	10.545612532853045	3.302866596336375	-2.3644431763398863
+898782at2759	0.188406	5.1884e-11	0.00090657	Aspartyl/glutamyl-tRNA(Asn/Gln) amidotransferase, B subunit	Aminoacyl-tRNA biosynthesis	ko00970	KEGGpathway		10.284966549338883	3.042598656609813	-2.5624143919636193
+850255at2759	0.230769	6.004e-11	0.001049	2-oxoacid dehydrogenase acyltransferase, catalytic domain	Citrate cycle (TCA cycle)	ko00020	KEGGpathway		10.221559316428767	2.979224511806442	-2.610574761861937
+850255at2759	0.230769	6.004e-11	0.001049	2-oxoacid dehydrogenase acyltransferase, catalytic domain	Lysine degradation	ko00310	KEGGpathway		10.221559316428767	2.979224511806442	-2.610574761861937
+1263874at2759	0.230769	6.004e-11	0.001049	NAD kinase	Nicotinate and nicotinamide metabolism	ko00760	KEGGpathway		10.221559316428767	2.979224511806442	-2.610574761861937
+1174160at2759	0.196429	6.7667e-11	0.0011822	Cytochrome b-c1 complex subunit Rieske, mitochondrial	Oxidative phosphorylation	ko00190	KEGGpathway		10.169623077430035	2.9273090449871315	-2.650022445769734
+37924at2759	0.161616	1.8286e-10	0.0031908	Adenylyl cyclase class-3/4/guanylyl cyclase	Purine metabolism	ko00230	KEGGpathway		9.737881284568124	2.4961004166208083	-2.977947880936849
+237390at2759	0.178082	2.1318e-10	0.0037194	Cobalamin-independent methionine synthase MetE, C-terminal/archaeal	Selenocompound metabolism	ko00450	KEGGpathway		9.671253542127028	2.429527113264783	-3.0285543586868195
+237390at2759	0.178082	2.1318e-10	0.0037194	Cobalamin-independent methionine synthase MetE, C-terminal/archaeal	Cysteine and methionine metabolism	ko00270	KEGGpathway		9.671253542127028	2.429527113264783	-3.0285543586868195
+1206249at2759	0.149533	1.0088e-09	0.017544	Indoleamine 2,3-dioxygenase	Tryptophan metabolism	ko00380	KEGGpathway		8.996194926434974	1.7558713813305336	-3.541288807781327
+220278at2759	0.153846	1.2483e-09	0.021702	Alanine dehydrogenase/pyridine nucleotide transhydrogenase, NAD(H)-binding domain	Nicotinate and nicotinamide metabolism	ko00760	KEGGpathway		8.903681029487391	1.6635002408547366	-3.611556871742522
+1454608at2759	0.117647	1.3764e-09	0.023926	Phosphatase PHOSPHO-type	Vitamin B6 metabolism	ko00750	KEGGpathway		8.861255336051107	1.6211299016010252	-3.6437809098420946
+1454608at2759	0.117647	1.3764e-09	0.023926	Phosphatase PHOSPHO-type	Glycerophospholipid metabolism	ko00564	KEGGpathway		8.861255336051107	1.6211299016010252	-3.6437809098420946
+1125788at2759	0.15	2.157e-09	0.037434	CTP-dependent diacylglycerol kinase 1	Glycerophospholipid metabolism	ko00564	KEGGpathway		8.666149854897455	1.4267337639859932	-3.7919714507362077
+1089743at2759	0.152	2.432e-09	0.042198	Short-chain dehydrogenase/reductase, conserved site	Folate biosynthesis	ko00790	KEGGpathway		8.614036429399302	1.3747081322029502	-3.8315537149901493
+1606436at2759	0.152	2.432e-09	0.042198	Cytochrome b-c1 complex subunit 7	Oxidative phosphorylation	ko00190	KEGGpathway		8.614036429399302	1.3747081322029502	-3.8315537149901493
+333458at2759	0.212121	4.8055e-09	0.08324	Nitrite/Sulfite reductase ferredoxin-like domain	Nitrogen metabolism	ko00910	KEGGpathway		8.31826141841297	1.0796679284604107	-4.056206854419423
+333458at2759	0.212121	4.8055e-09	0.08324	Nitrite/Sulfite reductase ferredoxin-like domain	Assimilatory nitrate reduction, nitrate => ammonia	M00531	KEGGpathway		8.31826141841297	1.0796679284604107	-4.056206854419423
+1574317at2759	0.2	1.1461e-08	0.19786	Adenylate cyclase, N-terminal	Purine metabolism	ko00230	KEGGpathway		7.94077748747031	0.7036419952586092	-4.342921238733282
+1405877at2759	0.155172	1.421e-08	0.24508	Transmembrane protein 42	Purine metabolism	ko00230	KEGGpathway		7.8474059220725305	0.6106921283400837	-4.413840736733086
+1405877at2759	0.155172	1.421e-08	0.24508	Transmembrane protein 42	One carbon pool by folate	ko00670	KEGGpathway		7.8474059220725305	0.6106921283400837	-4.413840736733086
+1390068at2759	0.142857	1.699e-08	0.29285	Short-chain dehydrogenase/reductase SDR	Synthesis and degradation of ketone bodies	ko00072	KEGGpathway		7.769806621130955	0.5333547716360212	-4.472780558984828
+1390068at2759	0.142857	1.699e-08	0.29285	Short-chain dehydrogenase/reductase SDR	Butanoate metabolism	ko00650	KEGGpathway		7.769806621130955	0.5333547716360212	-4.472780558984828
+1622159at2759	0.136364	2.1336e-08	0.36739	Transcription factor CBF/NF-Y/archaeal histone domain	Pyrimidine metabolism	ko00240	KEGGpathway		7.67088699731818	0.43487266894453785	-4.547914032791814
+1622159at2759	0.136364	2.1336e-08	0.36739	Transcription factor CBF/NF-Y/archaeal histone domain	Purine metabolism	ko00230	KEGGpathway		7.67088699731818	0.43487266894453785	-4.547914032791814
+754103at2759	0.114583	2.5829e-08	0.44418	Carboxylesterase, type B	Glycerophospholipid metabolism	ko00564	KEGGpathway		7.5878924077209495	0.3524410002341545	-4.610951796010843
+754103at2759	0.114583	2.5829e-08	0.44418	Carboxylesterase, type B	Drug metabolism - other enzymes	ko00983	KEGGpathway		7.5878924077209495	0.3524410002341545	-4.610951796010843
+871849at2759	0.135593	4.6099e-08	0.79033	Cytochrome P450	Retinol metabolism	ko00830	KEGGpathway		7.336308495417127	0.10219153243863902	-4.802040000320179
+871849at2759	0.135593	4.6099e-08	0.79033	Cytochrome P450	Carotenoid biosynthesis	ko00906	KEGGpathway		7.336308495417127	0.10219153243863902	-4.802040000320179
+871849at2759	0.135593	4.6099e-08	0.79033	Cytochrome P450	Brassinosteroid biosynthesis	ko00905	KEGGpathway		7.336308495417127	0.10219153243863902	-4.802040000320179
+871849at2759	0.135593	4.6099e-08	0.79033	Cytochrome P450	Primary bile acid biosynthesis	ko00120	KEGGpathway		7.336308495417127	0.10219153243863902	-4.802040000320179
+1074094at2759	0.12844	9.5255e-08	1.0	Short-chain dehydrogenase/reductase, conserved site	Valine, leucine and isoleucine degradation	ko00280	KEGGpathway		7.021112218640086	-0.0	-5.04144438028537
+166846at2759	0.111111	1.237e-07	1.0	Nitrate reductase	Assimilatory nitrate reduction, nitrate => ammonia	M00531	KEGGpathway		6.907630300370879	-0.0	-5.127638508459407
+166846at2759	0.111111	1.237e-07	1.0	Nitrate reductase	Nitrogen metabolism	ko00910	KEGGpathway		6.907630300370879	-0.0	-5.127638508459407
+1154369at2759	0.142857	1.6964e-07	1.0	Carbon-nitrogen hydrolase	Alanine, aspartate and glutamate metabolism	ko00250	KEGGpathway		6.770471736212328	-0.0	-5.231816011268304
+1579862at2759	0.086957	2.6383e-07	1.0	PIG-P	Glycosylphosphatidylinositol (GPI)-anchor biosynthesis	ko00563	KEGGpathway		6.578675822536138	-0.0	-5.37749280118161
+1320977at2759	0.12605	3.3849e-07	1.0	Glutathione S-transferase kappa	Glutathione metabolism	ko00480	KEGGpathway		6.470454157138276	-0.0	-5.45969155355362
+1320977at2759	0.12605	3.3849e-07	1.0	Glutathione S-transferase kappa	Metabolism of xenobiotics by cytochrome P450	ko00980	KEGGpathway		6.470454157138276	-0.0	-5.45969155355362
+1320977at2759	0.12605	3.3849e-07	1.0	Glutathione S-transferase kappa	Drug metabolism - cytochrome P450	ko00982	KEGGpathway		6.470454157138276	-0.0	-5.45969155355362
+1484710at2759	0.103093	3.7338e-07	1.0	Gamma-glutamyl cyclotransferase-like	Glutathione metabolism	ko00480	KEGGpathway		6.427848948631886	-0.0	-5.4920519406433925
+602546at2759	0.178571	4.2612e-07	1.0	Ketopantoate reductase, C-terminal domain	Pantothenate and CoA biosynthesis	ko00770	KEGGpathway		6.37046808165076	-0.0	-5.535635040741997
+590036at2759	0.1	6.7254e-07	1.0	Acetamidase/Formamidase	Cyanoamino acid metabolism	ko00460	KEGGpathway		6.172281880451705	-0.0	-5.686165513693233
+590036at2759	0.1	6.7254e-07	1.0	Acetamidase/Formamidase	Glyoxylate and dicarboxylate metabolism	ko00630	KEGGpathway		6.172281880451705	-0.0	-5.686165513693233
+590036at2759	0.1	6.7254e-07	1.0	Acetamidase/Formamidase	Nitrogen metabolism	ko00910	KEGGpathway		6.172281880451705	-0.0	-5.686165513693233
+1424146at2759	0.111111	7.2015e-07	1.0	Glycosyl transferase, family 8	Starch and sucrose metabolism	ko00500	KEGGpathway		6.142577034975153	-0.0	-5.708727550865728
+204282at2759	0.091837	4.4786e-06	1.0	Phosphatidylinositol 3-/4-kinase, catalytic domain	Inositol phosphate metabolism	ko00562	KEGGpathway		5.348857724237655	-0.0	-6.31158961953135
+1007850at2759	0.092784	1.3497e-05	1.0	RmlD-like substrate binding domain	Cysteine and methionine metabolism	ko00270	KEGGpathway		4.869762752114771	-0.0	-6.675481718506403
+1015783at2759	0.086022	1.8908e-05	1.0	C-5 cytosine methyltransferase	Cysteine and methionine metabolism	ko00270	KEGGpathway		4.723354406369124	-0.0	-6.786684806288306
+1566576at2759	0.101449	8.13e-05	1.0	V-type proton ATPase subunit G	Oxidative phosphorylation	ko00190	KEGGpathway		4.089909454405932	-0.0	-7.267811986842216
+1063757at2759	0.1	0.0004109	1.0	Glycogen debranching enzyme, glucanotransferase domain	Starch and sucrose metabolism	ko00500	KEGGpathway		3.3862638587381286	-0.0	-7.802259408837773
+1133952at2759	0.048193	0.00045093	1.0	Haem oxygenase-like, multi-helical	Thiamine metabolism	ko00730	KEGGpathway		3.345890870479527	-0.0	-7.832924333944834
+901158at2759	0.083333	0.00061646	1.0	Galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase	Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate	ko00532	KEGGpathway		3.210095098050994	-0.0	-7.93606674105881
+901158at2759	0.083333	0.00061646	1.0	Galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase	Glycosaminoglycan biosynthesis - heparan sulfate / heparin	ko00534	KEGGpathway		3.210095098050994	-0.0	-7.93606674105881
+901158at2759	0.083333	0.00061646	1.0	Galactosylgalactosylxylosylprotein 3-beta-glucuronosyltransferase	Mannose type O-glycan biosynthesis	ko00515	KEGGpathway		3.210095098050994	-0.0	-7.93606674105881
+1597363at2759	0.090278	0.00062136	1.0	Complex I subunit NDUFS6	Oxidative phosphorylation	ko00190	KEGGpathway		3.206656707853522	-0.0	-7.938678338130074
+1362234at2759	0.083333	0.0006437	1.0	Phosphotyrosine protein phosphatase I	Thiamine metabolism	ko00730	KEGGpathway		3.191316490871031	-0.0	-7.950329856265938
+1362234at2759	0.083333	0.0006437	1.0	Phosphotyrosine protein phosphatase I	Riboflavin metabolism	ko00740	KEGGpathway		3.191316490871031	-0.0	-7.950329856265938
+1099858at2759	0.064516	0.00074489	1.0	Pyridoxal phosphate-dependent transferase	Glycine, serine and threonine metabolism	ko00260	KEGGpathway		3.127907856003623	-0.0	-7.998491291007786
+559385at2759	0.068182	0.0009994	1.0	Glycoside hydrolase family 3 C-terminal domain	Cyanoamino acid metabolism	ko00460	KEGGpathway		3.000260654893432	-0.0	-8.09544452709469
+559385at2759	0.068182	0.0009994	1.0	Glycoside hydrolase family 3 C-terminal domain	Starch and sucrose metabolism	ko00500	KEGGpathway		3.000260654893432	-0.0	-8.09544452709469
+298283at2759	0.078947	0.0009996	1.0	AMP-binding, conserved site	Primary bile acid biosynthesis	ko00120	KEGGpathway		3.000173752545588	-0.0	-8.095510532959086
