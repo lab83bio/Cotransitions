@@ -59,4 +59,4 @@ A "transition" is a change in the gene distribution vector. When two genes (orth
 
 ![fig1 concordant](./Figures/Figure1B/Concordant_main_figures_revision1B.png)
 
-When two genes (orthogroups) share the opposite transition at the same position (e.g. 1/0, 0/1), a discordant (d) transition is counted (see [this figure]).
+When two genes (orthogroups) share the opposite transition at the same position (e.g. 1/0, 0/1), a discordant (d) transition is counted (see [this figure](./Figures/Figure1B/Concordant_Supplementary_Figures_revision_FigS1.png)).
