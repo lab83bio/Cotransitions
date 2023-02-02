@@ -55,6 +55,6 @@ The whole analysis can be performed by clicking ⏩ "Restart kernel and run all 
 
 ### How transitions are counted and scored
 
-A "transition" is a change in the gene distribution vector. When two orthogroups share the same transition at the same position (e.g. 1/0, 1/0), it is counted as a concordant transition.
-[fig1](Fugures/Figure1B/Concordant_main_figures_revision1B.png)
+A "transition" is a change in the gene distribution vector. When two orthogroups share the same transition at the same position (e.g. 1/0, 1/0), a concordant (c) transition is counted.
+[fig1](./Figures/Figure1B/Concordant_main_figures_revision1B.png)
 Concordant_main_figures_revision1B.png
