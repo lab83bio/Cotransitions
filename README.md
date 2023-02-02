@@ -53,8 +53,10 @@ then you can run
 [*Validation.ipynb*](https://github.com/lab83bio/Cotransitions/blob/master/Notebook/Validation.ipynb) files can be opened with `jupyter-lab` included in `cotr_extra` conda environment <br>
 The whole analysis can be performed by clicking ⏩ "Restart kernel and run all cells..."
 
-### How transitions are counted and scored
+## How transitions are counted and scored
 
-A "transition" is a change in the gene distribution vector. When two orthogroups share the same transition at the same position (e.g. 1/0, 1/0), a concordant (c) transition is counted.
-[fig1](./Figures/Figure1B/Concordant_main_figures_revision1B.png)
-Concordant_main_figures_revision1B.png
+A "transition" is a change in the gene distribution vector. When two genes (orthogroups) share the same transition at the same position (e.g. 1/0, 1/0), a concordant (c) transition is counted.
+
+![fig1 concordant](./Figures/Figure1B/Concordant_main_figures_revision1B.png)
+
+When two genes (orthogroups) share the opposite transition at the same position (e.g. 1/0, 0/1), a discordant (d) transition is counted (see [this figure]).
