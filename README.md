@@ -15,7 +15,7 @@ git clone https://github.com/lab83bio/Cotransitions.git
 cd Cotransitions
 source cotr_install
 ```
-The installation is successful if `(cotr)` in the command line prompt
+The installation is successful if `(cotr)` is added to the command line prompt
 
 ```console
 (cotr) user@pc:~/Cotransitions$ 
@@ -41,6 +41,10 @@ To run the whole pipeline with OMA HOGs, please install cotr_extra envinroment w
 ```{bash}
 source cotr_extra_install
 ```
+```console
+(cotr_extra) user@pc:~/Cotransitions$ 
+```
+
 
 then you can run
 ```bash
