@@ -61,7 +61,7 @@ A "transition" is a change in the gene distribution vector. When two genes (orth
 
 Conversely, when two genes (orthogroups) share the opposite transition at the same position (e.g. 1/0, 0/1), a discordant transition is counted (see [this figure](./Figures/Figure1B/Concordant_Supplementary_Figures_revision_FigS1.png)).
 
-The cotransition (cotr) score and significance are comuputed form the number of concordant (c), discordant (d), and total transitions (t1, t2).
+The co-transition (cotr) score and significance are comuputed form the number of concordant (c), discordant (d), and total transitions (t1, t2).
 The values shown for "[Case1](./Figures/Figure1B/Figure1B_Case1.csv.num)" can be obtained with the following command:
 ```bash
 ./cotr_transitions.py Figures/Figure1B/Figure1B_Case1.csv.num | ./cotr_Fisher.r -
