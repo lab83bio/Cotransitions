@@ -70,3 +70,5 @@ The values shown for "[Case2](./Figures/Figure1B/Figure1B_Case2.csv.num)" can be
 ```bash
 ./cotr_transitions.py Figures/Figure1B/Figure1B_Case2.csv.num | ./cotr_Fisher.r -
 ```
+
+Note that the cotr_score and scignificance discriminate among presence/absence patterns with the same Jaccard or Pearson scores, but different coevolutionary information content.
