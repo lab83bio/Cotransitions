@@ -7,8 +7,8 @@ library(corpora)   # Fast fisher.pval
 library(argparse) 
 
 ap <- ArgumentParser()
-ap$add_argument("-p", "--p.cutoff", type="double", default=1e-3, help="p cutoff")
-ap$add_argument("-pa", "--padj.cutoff", type="double", default=1e-3, help="p.adj cutoff")
+ap$add_argument("-p", "--p.cutoff", type="double", default=1, help="p cutoff")
+ap$add_argument("-pa", "--padj.cutoff", type="double", default=1, help="p.adj cutoff")
 ap$add_argument("csv", nargs=1, help="*.transitions tsv file")
  
 args <- ap$parse_args()

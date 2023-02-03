@@ -8,7 +8,7 @@ import argparse
 
 ap = argparse.ArgumentParser()
 ap.add_argument('csv',help='tab-separated file with gene occurrence (genes by rows)')
-ap.add_argument('-m','--min_transitions',default=4,
+ap.add_argument('-m','--min_transitions',default=0,
 				type=int,help='Minimum number of co-evolutionary transitions in a gene pair')
 ap.add_argument('-c','--count_consecutive',action='store_true',
 				help='Do not penalize concecutive transitions (e.g. 101)')

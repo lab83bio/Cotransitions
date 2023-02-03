@@ -32,7 +32,7 @@ wait
 
 #cotr analysis
 for d in ${ladder[@]}; do 
-    ${cwd}/cotr_transitions.py $level.$tree.$d.csv.num | ${cwd}/cotr_Fisher.r -p 1e-3 -pa 1 - > $level.$tree.$d.transitions.annotated &
+    ${cwd}/cotr_transitions.py -m 4 $level.$tree.$d.csv.num | ${cwd}/cotr_Fisher.r -p 1e-3 -pa 1 - > $level.$tree.$d.transitions.annotated &
 done
 wait
 
