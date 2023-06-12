@@ -2,7 +2,8 @@
 Statistical analysis of co-evolutionary transitions among genes.<br><br>
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7578797.svg)](https://doi.org/10.5281/zenodo.7578797) 
 <br><br>
-[cotr_logo](./Figures/cotr_logo.png)
+![cotr_logo](./Figures/cotr_logo.png)
+<br>
 Pipeline in python3 and R to perform coevolutionary analysis
 ## Citation:
 Dembech, Elena, Marco Malatesta, Carlo De Rito, Giulia Mori, Davide Cavazzini, Andrea Secchi, Francesco Morandin, and Riccardo Percudani. “Identification of Hidden Associations among Eukaryotic Genes through Statistical Analysis of Coevolutionary Transitions.” Proceedings of the National Academy of Sciences 120, no. 16 (April 18, 2023): e2218329120. https://doi.org/10.1073/pnas.2218329120.
